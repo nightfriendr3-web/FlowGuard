@@ -1,0 +1,371 @@
+<!DOCTYPE html><html lang="id" class="dark"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../aset/favicon.png">
+<link rel="apple-touch-icon" href="../aset/app-icon-192.png">
+<link rel="stylesheet" href="../aset/flowguard.css">
+<script defer src="../aset/flowguard.js"></script>
+
+  <meta charset="UTF-8">
+  <title>Insights &amp; Burnout Radar — FlowGuard</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config" data-stitch-original-src="0e026e4ec56befb6===../../tailwind.config.js">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'bg-primary': '#0D1321',
+        'bg-navy-end': '#1B2838',
+        'bg-surface': '#141C2E',
+        'bg-elevated': '#1C263B',
+        'border-subtle': '#29354D',
+        'text-primary': '#E8E6E3',
+        'text-secondary': '#9CA3AF',
+        'primary': '#6C8EEF',
+        'on-primary': '#00174A',
+        'accent-focus': '#6C8EEF',
+        'on-accent-focus': '#00174A',
+        'accent-indigo': '#818CF8',
+        'accent-purple': '#A78BFA',
+        'on-accent-purple': '#1E0A4B',
+        'accent-teal': '#5EEAD4',
+        'on-accent-teal': '#00201C',
+        'accent-break': '#81C995',
+        'on-accent-break': '#00210E',
+        'accent-warning': '#F4A261',
+        'on-accent-warning': '#2F1400',
+        'accent-danger': '#E07A6E',
+        'on-accent-danger': '#400202',
+        'energy-1': '#E07A6E',
+        'energy-2': '#F4A261',
+        'energy-3': '#FBBF24',
+        'energy-4': '#81C995',
+        'energy-5': '#34D399',
+        'focus-container': '#182442',
+        'on-focus-container': '#DBE1FF',
+        'break-container': '#122B24',
+        'on-break-container': '#A9F3BC',
+        'warning-container': '#332011',
+        'on-warning-container': '#FFDCC4',
+        'danger-container': '#361816',
+        'on-danger-container': '#FFDAD5',
+        'sepia-bg': '#F5F0E8',
+        'sepia-text': '#3D3929',
+        'forest-bg': '#1B2A1F',
+        'forest-accent': '#7BC8A4',
+      },
+      borderRadius: {
+        'sm': '6px',
+        'DEFAULT': '10px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"JetBrains Mono"', 'sans-serif'],
+        'headline': ['"Inter"', 'sans-serif'],
+        'body': ['"Inter"', 'sans-serif'],
+        'label': ['"Inter"', 'sans-serif'],
+        'caption': ['"Inter"', 'sans-serif'],
+      },
+      fontSize: {
+        'display-timer': ['72px', { lineHeight: '80px', letterSpacing: '-1.5px', fontWeight: '700' }],
+        'display-timer-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg': ['30px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-md': ['22px', { lineHeight: '30px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '500' }],
+        'caption-xs': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '400' }],
+      },
+      transitionDuration: {
+        'state-change': '300ms',
+        'surface-enter': '400ms',
+        'surface-exit': '300ms',
+        'flow-transition': '500ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+        'flow-transition': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+        'flow-transition': 'ease-in-out',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }
+    .bg-flow-mesh {
+      background-color: #0D1321;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 20% 10%, rgba(108, 142, 239, 0.14), transparent 60%),
+        radial-gradient(ellipse 60% 50% at 85% 25%, rgba(94, 234, 212, 0.08), transparent 55%),
+        radial-gradient(ellipse 70% 60% at 50% 95%, rgba(167, 139, 250, 0.10), transparent 60%),
+        linear-gradient(160deg, #0D1321 0%, #1B2838 100%);
+    }
+    .bg-grid-pattern {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+  </style>
+</head>
+<body class="bg-flow-mesh text-text-primary font-body antialiased">
+  <div class="min-h-[1024px] flex flex-col lg:flex-row relative" data-stitch-vh="min-h-[1024px]===min-h-screen">
+    <!-- Hexagonal Grid Background -->
+    <svg aria-hidden="true" class="fixed inset-0 w-full h-full pointer-events-none z-0 opacity-10" width="100%" height="100%">
+      <defs>
+        <pattern id="hex-grid" width="56" height="48" patternUnits="userSpaceOnUse">
+          <path d="M14 0 L42 0 L56 24 L42 48 L14 48 L0 24 Z" fill="none" stroke="#6C8EEF" stroke-width="0.8"></path>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#hex-grid)"></rect>
+    </svg>
+    <!-- Consistent 68px Glassmorphic Left Sidebar -->
+    <aside class="hidden lg:flex flex-col items-center justify-between min-h-[1024px] w-[72px] bg-bg-surface/60 backdrop-blur-xl border-r border-text-primary/10 py-gutter-lg px-gutter-xs sticky top-0 z-30 shrink-0" data-stitch-vh="min-h-[1024px]===min-h-screen">
+      <div class="flex flex-col items-center gap-gutter-xl w-full">
+        <a href="#" aria-label="FlowGuard Home" class="w-11 h-11 rounded-md bg-focus-container/70 border border-accent-focus/30 flex items-center justify-center text-accent-focus shadow-lg shadow-accent-focus/15">
+          <span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">shield</span>
+        </a>
+
+        <nav aria-label="Navigasi utama" class="flex flex-col items-center gap-gutter-sm w-full">
+          <a href="#" class="w-14 py-gutter-xs rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary flex flex-col items-center justify-center gap-0.5 transition-colors duration-state-change">
+            <span class="material-symbols-outlined">home</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs">Home</span>
+          </a>
+          <a href="#" aria-current="page" class="w-14 py-gutter-xs rounded-md bg-focus-container text-on-focus-container border border-accent-focus/40 shadow-md shadow-accent-focus/15 flex flex-col items-center justify-center gap-0.5 transition-colors duration-state-change">
+            <span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">bar_chart</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs">Insights</span>
+          </a>
+          <a href="#" class="w-14 py-gutter-xs rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary flex flex-col items-center justify-center gap-0.5 transition-colors duration-state-change">
+            <span class="material-symbols-outlined">menu_book</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs">Istirahat</span>
+          </a>
+          <a href="#" class="w-14 py-gutter-xs rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary flex flex-col items-center justify-center gap-0.5 transition-colors duration-state-change">
+            <span class="material-symbols-outlined">settings</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs">Pengaturan</span>
+          </a>
+        </nav>
+      </div>
+
+      <button type="button" aria-label="Profil Andi Pratama" class="w-10 h-10 rounded-full bg-gradient-to-br from-accent-focus to-accent-purple text-on-accent-focus font-semibold flex items-center justify-center border border-text-primary/20">
+        <span data-design-text-token="label-sm" class="text-label-sm">AP</span>
+      </button>
+    </aside>
+
+    <div class="flex-1 flex flex-col min-w-0">
+      <!-- Content Header -->
+      <header class="sticky top-0 z-20 bg-bg-surface/40 backdrop-blur-xl border-b border-text-primary/10 px-gutter-md lg:px-gutter-xl py-gutter-md flex flex-wrap items-center justify-between gap-gutter-md">
+        <div class="flex items-center gap-gutter-sm">
+          <span class="material-symbols-outlined text-accent-focus">bar_chart</span>
+          <h1 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Insights &amp; Burnout Radar</h1>
+        </div>
+
+        <div class="flex items-center gap-gutter-xs bg-bg-surface/70 border border-text-primary/10 rounded-full p-1">
+          <button type="button" aria-pressed="true" class="px-gutter-md py-1.5 rounded-full bg-focus-container text-on-focus-container">
+            <span data-design-text-token="label-sm" class="text-label-sm">Hari Ini</span>
+          </button>
+          <button type="button" class="px-gutter-md py-1.5 rounded-full text-text-secondary hover:text-text-primary">
+            <span data-design-text-token="label-sm" class="text-label-sm">Minggu Ini</span>
+          </button>
+          <button type="button" class="px-gutter-md py-1.5 rounded-full text-text-secondary hover:text-text-primary">
+            <span data-design-text-token="label-sm" class="text-label-sm">Bulan Ini</span>
+          </button>
+        </div>
+      </header>
+
+      <main class="flex-1 max-w-6xl w-full mx-auto px-gutter-md lg:px-gutter-xl py-gutter-xl flex flex-col gap-gutter-lg">
+        <!-- Row 1: Burnout Radar (Full Width) -->
+        <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-md shadow-lg">
+          <header class="flex flex-wrap items-center justify-between gap-gutter-md">
+            <div class="flex items-center gap-gutter-sm">
+              <span class="material-symbols-outlined text-accent-focus" style="font-variation-settings: &#39;FILL&#39; 1;">shield</span>
+              <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Burnout Radar</h2>
+            </div>
+            <span class="inline-flex items-center gap-gutter-xs px-gutter-md py-gutter-xs rounded-full bg-warning-container/80 border border-accent-warning/40 text-on-warning-container">
+              <span class="material-symbols-outlined text-label-sm">warning</span>
+              <span data-design-text-token="label-sm" class="text-label-sm">SEDANG — Pertimbangkan sesi lebih pendek</span>
+            </span>
+          </header>
+
+          <div class="grid grid-cols-1 lg:grid-cols-3 gap-gutter-lg items-center">
+            <div class="lg:col-span-2 flex flex-col gap-gutter-sm">
+              <div class="flex items-baseline justify-between">
+                <span data-design-text-token="body-md" class="text-body-md text-text-secondary">Digital Fatigue Score</span>
+                <span data-design-text-token="headline-lg" class="font-headline text-headline-lg text-accent-warning tabular-nums">68 / 100</span>
+              </div>
+              <div class="relative w-full h-3 rounded-full bg-bg-elevated overflow-hidden">
+                <div class="h-full w-[68%] rounded-full bg-gradient-to-r from-accent-break via-energy-3 to-accent-warning"></div>
+              </div>
+              <div class="flex justify-between text-text-secondary">
+                <span data-design-text-token="caption-xs" class="text-caption-xs">0 · Segar</span>
+                <span data-design-text-token="caption-xs" class="text-caption-xs">50 · Sedang</span>
+                <span data-design-text-token="caption-xs" class="text-caption-xs">100 · Kritis</span>
+              </div>
+            </div>
+
+            <!-- 7-day Sparkline -->
+            <div class="bg-bg-elevated/50 border border-text-primary/10 rounded-md p-gutter-md flex items-center justify-between gap-gutter-md">
+              <div>
+                <p data-design-text-token="label-sm" class="text-label-sm text-text-secondary">Tren 7 hari</p>
+                <p data-design-text-token="body-md" class="text-body-md text-text-primary tabular-nums">52 → 68 (naik)</p>
+              </div>
+              <svg width="96" height="36" viewBox="0 0 96 36" fill="none" aria-hidden="true">
+                <path d="M4 28 L20 24 L36 26 L52 18 L68 15 L84 8 L92 6" stroke="#F4A261" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </div>
+          </div>
+        </article>
+
+        <!-- Row 2: Energy-Time Heatmap + Today's Stats -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-gutter-lg items-stretch">
+          <!-- Energy-Time Heatmap -->
+          <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col justify-between gap-gutter-md shadow-lg">
+            <header class="flex items-center justify-between">
+              <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Energy-Time Heatmap</h2>
+              <span data-design-text-token="label-sm" class="text-label-sm text-accent-teal">Golden Hour: 09:00</span>
+            </header>
+
+            <div class="grid grid-cols-6 gap-gutter-xs text-center items-center">
+              <span></span>
+              <span data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Sen</span>
+              <span data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Sel</span>
+              <span data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Rab</span>
+              <span data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Kam</span>
+              <span data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Jum</span>
+
+              <span data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary tabular-nums">08:00</span>
+              <div class="h-7 rounded-sm bg-energy-4/70"></div>
+              <div class="h-7 rounded-sm bg-energy-4/70"></div>
+              <div class="h-7 rounded-sm bg-energy-3/70"></div>
+              <div class="h-7 rounded-sm bg-energy-4/70"></div>
+              <div class="h-7 rounded-sm bg-energy-4/70"></div>
+
+              <span data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary tabular-nums">09:00</span>
+              <div class="h-7 rounded-sm bg-energy-5/80"></div>
+              <div class="h-7 rounded-sm bg-energy-5/80"></div>
+              <div class="h-7 rounded-sm bg-energy-4/70"></div>
+              <div class="h-7 rounded-sm bg-energy-3/70"></div>
+              <div class="h-7 rounded-sm bg-energy-5/80"></div>
+
+              <span data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary tabular-nums">11:00</span>
+              <div class="h-7 rounded-sm bg-energy-3/70"></div>
+              <div class="h-7 rounded-sm bg-energy-3/70"></div>
+              <div class="h-7 rounded-sm bg-energy-3/70"></div>
+              <div class="h-7 rounded-sm bg-energy-1/70"></div>
+              <div class="h-7 rounded-sm bg-energy-3/70"></div>
+
+              <span data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary tabular-nums">14:00</span>
+              <div class="h-7 rounded-sm bg-energy-1/70"></div>
+              <div class="h-7 rounded-sm bg-energy-1/70"></div>
+              <div class="h-7 rounded-sm bg-energy-1/70"></div>
+              <div class="h-7 rounded-sm bg-energy-2/70"></div>
+              <div class="h-7 rounded-sm bg-bg-elevated"></div>
+            </div>
+
+            <footer class="flex items-center justify-between pt-gutter-sm border-t border-text-primary/10">
+              <div class="flex items-center gap-gutter-md">
+                <span class="inline-flex items-center gap-1 text-caption-xs text-text-secondary"><span class="w-2.5 h-2.5 rounded-full bg-energy-4"></span>Tinggi</span>
+                <span class="inline-flex items-center gap-1 text-caption-xs text-text-secondary"><span class="w-2.5 h-2.5 rounded-full bg-energy-3"></span>Sedang</span>
+                <span class="inline-flex items-center gap-1 text-caption-xs text-text-secondary"><span class="w-2.5 h-2.5 rounded-full bg-energy-1"></span>Rendah</span>
+              </div>
+              <span data-design-text-token="caption-xs" class="text-caption-xs text-accent-danger">Slump: 14:00</span>
+            </footer>
+          </article>
+
+          <!-- Today's Stats -->
+          <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col justify-between gap-gutter-md shadow-lg">
+            <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Statistik Hari Ini</h2>
+            <div class="flex flex-col gap-gutter-sm">
+              <div class="flex items-center justify-between py-gutter-xs border-b border-text-primary/10">
+                <span class="flex items-center gap-gutter-sm text-body-md text-text-secondary"><span class="material-symbols-outlined text-accent-focus">schedule</span>Total Fokus</span>
+                <span data-design-text-token="body-md" class="text-body-md text-text-primary tabular-nums">3j 45m</span>
+              </div>
+              <div class="flex items-center justify-between py-gutter-xs border-b border-text-primary/10">
+                <span class="flex items-center gap-gutter-sm text-body-md text-text-secondary"><span class="material-symbols-outlined text-accent-break">local_cafe</span>Jeda Selesai</span>
+                <span data-design-text-token="body-md" class="text-body-md text-text-primary tabular-nums">5 / 6</span>
+              </div>
+              <div class="flex items-center justify-between py-gutter-xs border-b border-text-primary/10">
+                <span class="flex items-center gap-gutter-sm text-body-md text-text-secondary"><span class="material-symbols-outlined text-accent-teal">visibility</span>Latihan Mata</span>
+                <span data-design-text-token="body-md" class="text-body-md text-text-primary tabular-nums">4x</span>
+              </div>
+              <div class="flex items-center justify-between py-gutter-xs border-b border-text-primary/10">
+                <span class="flex items-center gap-gutter-sm text-body-md text-text-secondary"><span class="material-symbols-outlined text-accent-focus">water_drop</span>Hidrasi</span>
+                <span data-design-text-token="body-md" class="text-body-md text-text-primary tabular-nums">3x</span>
+              </div>
+              <div class="flex items-center justify-between py-gutter-xs">
+                <span class="flex items-center gap-gutter-sm text-body-md text-text-secondary"><span class="material-symbols-outlined text-accent-purple">trending_up</span>Energi Rata-rata</span>
+                <span data-design-text-token="body-md" class="text-body-md text-text-primary tabular-nums">3.2 / 5</span>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- Row 3: Micro-Break Compliance -->
+        <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-md shadow-lg">
+          <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Kepatuhan Micro-Break (Minggu Ini)</h2>
+          <div class="flex flex-col gap-gutter-sm">
+            <div class="flex items-center gap-gutter-md">
+              <span data-design-text-token="label-lg" class="w-10 text-label-lg text-text-secondary">Sen</span>
+              <div class="flex-1 h-3 rounded-full bg-bg-elevated overflow-hidden"><div class="h-full w-full rounded-full bg-gradient-to-r from-accent-break to-accent-teal"></div></div>
+              <span data-design-text-token="label-lg" class="w-12 text-right text-label-lg text-text-primary tabular-nums">100%</span>
+            </div>
+            <div class="flex items-center gap-gutter-md">
+              <span data-design-text-token="label-lg" class="w-10 text-label-lg text-text-secondary">Sel</span>
+              <div class="flex-1 h-3 rounded-full bg-bg-elevated overflow-hidden"><div class="h-full w-[80%] rounded-full bg-gradient-to-r from-accent-break to-accent-teal"></div></div>
+              <span data-design-text-token="label-lg" class="w-12 text-right text-label-lg text-text-primary tabular-nums">80%</span>
+            </div>
+            <div class="flex items-center gap-gutter-md">
+              <span data-design-text-token="label-lg" class="w-10 text-label-lg text-text-secondary">Rab</span>
+              <div class="flex-1 h-3 rounded-full bg-bg-elevated overflow-hidden"><div class="h-full w-[50%] rounded-full bg-accent-warning"></div></div>
+              <span data-design-text-token="label-lg" class="w-12 text-right text-label-lg text-accent-warning tabular-nums">50%</span>
+            </div>
+            <div class="flex items-center gap-gutter-md">
+              <span data-design-text-token="label-lg" class="w-10 text-label-lg text-text-secondary">Kam</span>
+              <div class="flex-1 h-3 rounded-full bg-bg-elevated overflow-hidden"><div class="h-full w-full rounded-full bg-gradient-to-r from-accent-break to-accent-teal"></div></div>
+              <span data-design-text-token="label-lg" class="w-12 text-right text-label-lg text-text-primary tabular-nums">100%</span>
+            </div>
+            <div class="flex items-center gap-gutter-md">
+              <span data-design-text-token="label-lg" class="w-10 text-label-lg text-text-secondary">Jum</span>
+              <div class="flex-1 h-3 rounded-full bg-bg-elevated overflow-hidden"><div class="h-full w-[85%] rounded-full bg-gradient-to-r from-accent-break to-accent-teal"></div></div>
+              <span data-design-text-token="label-lg" class="w-12 text-right text-label-lg text-text-primary tabular-nums">85%</span>
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <!-- Mobile Bottom Tab Bar -->
+      <nav aria-label="Navigasi mobile" class="lg:hidden sticky bottom-0 z-20 bg-bg-surface/80 backdrop-blur-xl border-t border-text-primary/10 grid grid-cols-4 h-14">
+        <a href="#" class="flex flex-col items-center justify-center gap-0.5 text-text-secondary"><span class="material-symbols-outlined">home</span><span data-design-text-token="caption-xs" class="text-caption-xs">Home</span></a>
+        <a href="#" aria-current="page" class="flex flex-col items-center justify-center gap-0.5 text-accent-focus"><span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">bar_chart</span><span data-design-text-token="caption-xs" class="text-caption-xs">Insights</span></a>
+        <a href="#" class="flex flex-col items-center justify-center gap-0.5 text-text-secondary"><span class="material-symbols-outlined">menu_book</span><span data-design-text-token="caption-xs" class="text-caption-xs">Istirahat</span></a>
+        <a href="#" class="flex flex-col items-center justify-center gap-0.5 text-text-secondary"><span class="material-symbols-outlined">settings</span><span data-design-text-token="caption-xs" class="text-caption-xs">Pengaturan</span></a>
+      </nav>
+    </div>
+  </div>
+
+
+</body></html>

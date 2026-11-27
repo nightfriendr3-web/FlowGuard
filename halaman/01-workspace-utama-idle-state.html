@@ -1,0 +1,351 @@
+<!DOCTYPE html><html lang="id" class="dark"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../aset/favicon.png">
+<link rel="apple-touch-icon" href="../aset/app-icon-192.png">
+<link rel="stylesheet" href="../aset/flowguard.css">
+<script defer src="../aset/flowguard.js"></script>
+
+  <meta charset="UTF-8">
+  <title>Workspace Utama — FlowGuard</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config" data-stitch-original-src="0e026e4ec56befb6===../../tailwind.config.js">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'bg-primary': '#0D1321',
+        'bg-navy-end': '#1B2838',
+        'bg-surface': '#141C2E',
+        'bg-elevated': '#1C263B',
+        'border-subtle': '#29354D',
+        'text-primary': '#E8E6E3',
+        'text-secondary': '#9CA3AF',
+        'primary': '#6C8EEF',
+        'on-primary': '#00174A',
+        'accent-focus': '#6C8EEF',
+        'on-accent-focus': '#00174A',
+        'accent-indigo': '#818CF8',
+        'accent-purple': '#A78BFA',
+        'on-accent-purple': '#1E0A4B',
+        'accent-teal': '#5EEAD4',
+        'on-accent-teal': '#00201C',
+        'accent-break': '#81C995',
+        'on-accent-break': '#00210E',
+        'accent-warning': '#F4A261',
+        'on-accent-warning': '#2F1400',
+        'accent-danger': '#E07A6E',
+        'on-accent-danger': '#400202',
+        'energy-1': '#E07A6E',
+        'energy-2': '#F4A261',
+        'energy-3': '#FBBF24',
+        'energy-4': '#81C995',
+        'energy-5': '#34D399',
+        'focus-container': '#182442',
+        'on-focus-container': '#DBE1FF',
+        'break-container': '#122B24',
+        'on-break-container': '#A9F3BC',
+        'warning-container': '#332011',
+        'on-warning-container': '#FFDCC4',
+        'danger-container': '#361816',
+        'on-danger-container': '#FFDAD5',
+        'sepia-bg': '#F5F0E8',
+        'sepia-text': '#3D3929',
+        'forest-bg': '#1B2A1F',
+        'forest-accent': '#7BC8A4',
+      },
+      borderRadius: {
+        'sm': '6px',
+        'DEFAULT': '10px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"JetBrains Mono"', 'sans-serif'],
+        'headline': ['"Inter"', 'sans-serif'],
+        'body': ['"Inter"', 'sans-serif'],
+        'label': ['"Inter"', 'sans-serif'],
+        'caption': ['"Inter"', 'sans-serif'],
+      },
+      fontSize: {
+        'display-timer': ['72px', { lineHeight: '80px', letterSpacing: '-1.5px', fontWeight: '700' }],
+        'display-timer-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg': ['30px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-md': ['22px', { lineHeight: '30px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '500' }],
+        'caption-xs': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '400' }],
+      },
+      transitionDuration: {
+        'state-change': '300ms',
+        'surface-enter': '400ms',
+        'surface-exit': '300ms',
+        'flow-transition': '500ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+        'flow-transition': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+        'flow-transition': 'ease-in-out',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }
+    .bg-flow-mesh {
+      background-color: #0D1321;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 20% 10%, rgba(108, 142, 239, 0.14), transparent 60%),
+        radial-gradient(ellipse 60% 50% at 85% 25%, rgba(94, 234, 212, 0.08), transparent 55%),
+        radial-gradient(ellipse 70% 60% at 50% 95%, rgba(167, 139, 250, 0.10), transparent 60%),
+        linear-gradient(160deg, #0D1321 0%, #1B2838 100%);
+    }
+    .bg-grid-pattern {
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+  </style>
+</head>
+<body class="bg-flow-mesh text-text-primary font-body antialiased selection:bg-focus-container selection:text-on-focus-container">
+  <div class="min-h-[1024px] flex flex-col lg:flex-row relative" data-stitch-vh="min-h-[1024px]===min-h-screen">
+    <!-- Topographic Contour Lines Background -->
+    <svg aria-hidden="true" class="fixed inset-0 w-full h-full pointer-events-none z-0 opacity-10" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+      <g fill="none" stroke="#5EEAD4" stroke-width="1">
+        <path d="M-50 180 C180 120, 320 260, 560 190 C800 120, 960 280, 1250 160"></path>
+        <path d="M-50 260 C210 190, 360 340, 610 260 C850 180, 1000 350, 1250 240"></path>
+        <path d="M-50 360 C160 310, 420 430, 660 350 C900 270, 1020 440, 1250 340"></path>
+        <path d="M-50 540 C240 480, 440 620, 720 530 C960 450, 1060 610, 1250 510"></path>
+        <path d="M-50 660 C280 590, 480 730, 760 640 C980 570, 1090 710, 1250 630"></path>
+      </g>
+    </svg>
+    <!-- Consistent 68px Glassmorphic Left Sidebar -->
+    <aside class="hidden lg:flex flex-col items-center justify-between min-h-[1024px] w-[72px] bg-bg-surface/60 backdrop-blur-xl border-r border-text-primary/10 py-gutter-lg px-gutter-xs sticky top-0 z-30 shrink-0" data-stitch-vh="min-h-[1024px]===min-h-screen">
+      <div class="flex flex-col items-center gap-gutter-xl w-full">
+        <a href="#" aria-label="FlowGuard Home" class="w-11 h-11 rounded-md bg-focus-container/70 border border-accent-focus/30 flex items-center justify-center text-accent-focus shadow-lg shadow-accent-focus/15">
+          <span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">shield</span>
+        </a>
+
+        <nav aria-label="Navigasi utama" class="flex flex-col items-center gap-gutter-sm w-full">
+          <a href="#" aria-current="page" class="w-14 py-gutter-xs rounded-md bg-focus-container text-on-focus-container border border-accent-focus/40 shadow-md shadow-accent-focus/15 flex flex-col items-center justify-center gap-0.5 transition-colors duration-state-change">
+            <span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">home</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs">Home</span>
+          </a>
+          <a href="#" class="w-14 py-gutter-xs rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary flex flex-col items-center justify-center gap-0.5 transition-colors duration-state-change">
+            <span class="material-symbols-outlined">bar_chart</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs">Insights</span>
+          </a>
+          <a href="#" class="w-14 py-gutter-xs rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary flex flex-col items-center justify-center gap-0.5 transition-colors duration-state-change">
+            <span class="material-symbols-outlined">menu_book</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs">Istirahat</span>
+          </a>
+          <a href="#" class="w-14 py-gutter-xs rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary flex flex-col items-center justify-center gap-0.5 transition-colors duration-state-change">
+            <span class="material-symbols-outlined">settings</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs">Pengaturan</span>
+          </a>
+        </nav>
+      </div>
+
+      <button type="button" aria-label="Profil Andi Pratama" class="w-10 h-10 rounded-full bg-gradient-to-br from-accent-focus to-accent-purple text-on-accent-focus font-semibold flex items-center justify-center border border-text-primary/20">
+        <span data-design-text-token="label-sm" class="text-label-sm">AP</span>
+      </button>
+    </aside>
+
+    <!-- Main Workspace Container -->
+    <div class="flex-1 flex flex-col min-w-0">
+      <!-- Glass Header Bar -->
+      <header class="sticky top-0 z-20 bg-bg-surface/40 backdrop-blur-xl border-b border-text-primary/10 px-gutter-md lg:px-gutter-xl py-gutter-md flex items-center justify-between gap-gutter-md">
+        <div class="flex items-center gap-gutter-sm">
+          <!-- COMPONENT: badge-success -->
+          <span data-component-id="badge-success" data-component-type="badge" data-component-variant="success" role="status" class="inline-flex items-center gap-gutter-xs px-gutter-sm py-gutter-xs rounded-full bg-break-container/80 border border-accent-break/30 text-on-break-container">
+            <span class="w-2 h-2 rounded-full bg-accent-break"></span>
+            <span data-design-text-token="label-sm" class="text-label-sm">Siap Fokus</span>
+          </span>
+        </div>
+
+        <!-- Center Status Info -->
+        <div class="hidden md:flex items-center gap-gutter-lg text-text-secondary">
+          <div class="flex items-center gap-gutter-xs">
+            <span class="material-symbols-outlined text-accent-teal text-label-lg">schedule</span>
+            <span data-design-text-token="label-lg" class="text-label-lg text-text-primary tabular-nums">2j 15m layar</span>
+          </div>
+          <span class="text-border-subtle">·</span>
+          <div class="flex items-center gap-gutter-xs">
+            <span class="material-symbols-outlined text-accent-warning text-label-lg">wb_sunny</span>
+            <span data-design-text-token="label-lg" class="text-label-lg text-text-primary tabular-nums">Sesi Hari Ini: 3</span>
+          </div>
+        </div>
+
+        <!-- Right Controls: Theme, Notif, Avatar -->
+        <div class="flex items-center gap-gutter-sm">
+          <button data-component-id="button-icon" data-component-type="button" data-component-variant="icon" type="button" aria-label="Ganti tema" class="inline-flex items-center justify-center w-11 h-11 rounded-md bg-bg-elevated/60 text-text-secondary border border-text-primary/10 hover:bg-bg-elevated hover:text-text-primary transition-colors duration-state-change">
+            <span class="material-symbols-outlined">palette</span>
+          </button>
+          <button data-component-id="button-icon" data-component-type="button" data-component-variant="icon" type="button" aria-label="Notifikasi" class="inline-flex items-center justify-center w-11 h-11 rounded-md bg-bg-elevated/60 text-text-secondary border border-text-primary/10 hover:bg-bg-elevated hover:text-text-primary transition-colors duration-state-change">
+            <span class="material-symbols-outlined">notifications</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Primary Main Content -->
+      <main class="flex-1 max-w-5xl w-full mx-auto px-gutter-md lg:px-gutter-xl py-gutter-xl flex flex-col gap-section">
+        <!-- Focus Timer Hero -->
+        <section class="flex flex-col items-center justify-center text-center gap-gutter-lg py-gutter-sm">
+          <h1 data-design-text-token="headline-lg" class="font-headline text-headline-lg text-text-primary text-balance">
+            Siap untuk fokus?
+          </h1>
+
+          <!-- SVG Timer Ring with Soft Blue Ambient Glow -->
+          <div class="relative flex items-center justify-center w-64 h-64 sm:w-72 sm:h-72 rounded-full shadow-2xl shadow-accent-focus/20 bg-bg-surface/30 backdrop-blur-md">
+            <svg class="w-full h-full -rotate-90" viewBox="0 0 240 240" aria-hidden="true">
+              <circle cx="120" cy="120" r="104" fill="none" stroke="rgba(108, 142, 239, 0.12)" stroke-width="10"></circle>
+              <circle cx="120" cy="120" r="104" fill="none" stroke="#6C8EEF" stroke-width="10" stroke-linecap="round" stroke-dasharray="653.45" stroke-dashoffset="163.36" style="transform-box: fill-box; transform-origin: center;"></circle>
+            </svg>
+            <div class="absolute inset-0 flex flex-col items-center justify-center gap-gutter-xs">
+              <span data-design-text-token="display-timer" class="font-display text-display-timer-mobile md:text-display-timer text-text-primary tabular-nums">25:00</span>
+              <span data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Idle — sesi fokus #1</span>
+            </div>
+          </div>
+
+          <!-- Single Primary Gradient CTA -->
+          <!-- COMPONENT: button-with-icon -->
+          <button data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" type="button" class="inline-flex items-center justify-center gap-gutter-sm min-h-[48px] px-gutter-xl py-gutter-md rounded-md bg-gradient-to-r from-accent-focus to-accent-purple text-on-accent-focus font-body shadow-lg shadow-accent-focus/25 transition-opacity duration-state-change ease-state-change hover:opacity-90">
+            <span class="material-symbols-outlined" aria-hidden="true" style="font-variation-settings: &#39;FILL&#39; 1;">play_arrow</span>
+            <span data-design-text-token="label-lg" class="text-label-lg">Mulai Sesi Fokus</span>
+          </button>
+        </section>
+
+        <!-- Secondary Panels: Tugas Hari Ini & Soundscape (Glassmorphism) -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-gutter-lg items-stretch">
+          <!-- Card: Tugas Hari Ini -->
+          <!-- COMPONENT: card-elevated -->
+          <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-md h-full shadow-lg">
+            <header class="flex items-center justify-between gap-gutter-sm">
+              <div class="flex items-center gap-gutter-sm">
+                <span class="material-symbols-outlined text-accent-focus">check_circle</span>
+                <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Tugas Hari Ini</h2>
+              </div>
+              <span data-design-text-token="label-sm" class="text-label-sm text-text-secondary tabular-nums">3 tugas</span>
+            </header>
+
+            <div class="flex items-center gap-gutter-sm bg-bg-elevated/60 border border-text-primary/10 rounded-md px-gutter-md py-gutter-sm">
+              <span class="material-symbols-outlined text-text-secondary">add</span>
+              <input type="text" placeholder="Tambah tugas baru..." aria-label="Tambah tugas baru" class="w-full bg-transparent border-none p-0 text-body-md text-text-primary placeholder:text-text-secondary focus:ring-0">
+            </div>
+
+            <ul class="flex flex-col gap-gutter-sm">
+              <li class="flex items-center gap-gutter-md min-h-[44px] px-gutter-sm rounded-md hover:bg-bg-elevated/50 transition-colors duration-state-change">
+                <input type="checkbox" id="task-1" class="w-5 h-5 rounded-sm bg-bg-primary/60 border-border-subtle text-accent-focus focus:ring-accent-focus">
+                <label for="task-1" data-design-text-token="body-md" class="text-body-md text-text-primary cursor-pointer flex-1">Revisi laporan BAB 3</label>
+                <span data-design-text-token="label-sm" class="text-label-sm text-accent-teal">Prioritas</span>
+              </li>
+              <li class="flex items-center gap-gutter-md min-h-[44px] px-gutter-sm rounded-md hover:bg-bg-elevated/50 transition-colors duration-state-change">
+                <input type="checkbox" id="task-2" class="w-5 h-5 rounded-sm bg-bg-primary/60 border-border-subtle text-accent-focus focus:ring-accent-focus">
+                <label for="task-2" data-design-text-token="body-md" class="text-body-md text-text-primary cursor-pointer flex-1">Review pull request</label>
+              </li>
+              <li class="flex items-center gap-gutter-md min-h-[44px] px-gutter-sm rounded-md hover:bg-bg-elevated/50 transition-colors duration-state-change">
+                <input type="checkbox" id="task-3" class="w-5 h-5 rounded-sm bg-bg-primary/60 border-border-subtle text-accent-focus focus:ring-accent-focus">
+                <label for="task-3" data-design-text-token="body-md" class="text-body-md text-text-primary cursor-pointer flex-1">Balas email klien</label>
+              </li>
+            </ul>
+          </article>
+
+          <!-- Card: Soundscape Mixer -->
+          <!-- COMPONENT: card-elevated -->
+          <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col justify-between gap-gutter-md h-full shadow-lg">
+            <div class="flex flex-col gap-gutter-md">
+              <header class="flex items-center justify-between gap-gutter-sm">
+                <div class="flex items-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-accent-teal">graphic_eq</span>
+                  <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Soundscape</h2>
+                </div>
+                <button type="button" class="inline-flex items-center gap-gutter-xs px-gutter-sm py-gutter-xs rounded-md bg-bg-elevated/70 border border-text-primary/10 text-text-secondary hover:text-text-primary transition-colors duration-state-change">
+                  <span class="material-symbols-outlined text-label-lg">music_note</span>
+                  <span data-design-text-token="label-lg" class="text-label-lg">Preset</span>
+                  <span class="material-symbols-outlined text-label-lg">expand_more</span>
+                </button>
+              </header>
+
+              <!-- Slider 1: Hujan Ringan -->
+              <label data-component-id="slider-continuous" data-component-type="slider" data-component-variant="continuous" class="flex flex-col gap-gutter-xs w-full">
+                <div class="flex items-center justify-between">
+                  <span class="flex items-center gap-gutter-sm text-body-md text-text-primary">
+                    <span class="material-symbols-outlined text-accent-focus">water_drop</span>
+                    <span data-design-text-token="body-md" class="text-body-md">Hujan Ringan</span>
+                  </span>
+                  <span data-design-text-token="label-lg" class="text-label-lg text-text-secondary tabular-nums">60%</span>
+                </div>
+                <input type="range" min="0" max="100" value="60" step="1" class="w-full h-2 rounded-full bg-bg-elevated accent-accent-focus cursor-pointer">
+              </label>
+
+              <!-- Slider 2: Brown Noise -->
+              <label data-component-id="slider-continuous" data-component-type="slider" data-component-variant="continuous" class="flex flex-col gap-gutter-xs w-full">
+                <div class="flex items-center justify-between">
+                  <span class="flex items-center gap-gutter-sm text-body-md text-text-primary">
+                    <span class="material-symbols-outlined text-accent-purple">waves</span>
+                    <span data-design-text-token="body-md" class="text-body-md">Brown Noise</span>
+                  </span>
+                  <span data-design-text-token="label-lg" class="text-label-lg text-text-secondary tabular-nums">40%</span>
+                </div>
+                <input type="range" min="0" max="100" value="40" step="1" class="w-full h-2 rounded-full bg-bg-elevated accent-accent-purple cursor-pointer">
+              </label>
+            </div>
+
+            <footer class="pt-gutter-sm border-t border-text-primary/10 flex items-center justify-between gap-gutter-sm text-text-secondary">
+              <span data-design-text-token="label-sm" class="text-label-sm">Preset: Nulis Skripsi</span>
+              <span data-design-text-token="label-sm" class="text-label-sm text-accent-teal">Fade-in 2 dtk</span>
+            </footer>
+          </article>
+        </section>
+      </main>
+
+      <!-- Mobile Bottom Tab Bar -->
+      <nav aria-label="Navigasi mobile" class="lg:hidden sticky bottom-0 z-20 bg-bg-surface/80 backdrop-blur-xl border-t border-text-primary/10 grid grid-cols-4 h-14">
+        <a href="#" aria-current="page" class="flex flex-col items-center justify-center gap-0.5 text-accent-focus">
+          <span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">home</span>
+          <span data-design-text-token="caption-xs" class="text-caption-xs">Home</span>
+        </a>
+        <a href="#" class="flex flex-col items-center justify-center gap-0.5 text-text-secondary">
+          <span class="material-symbols-outlined">bar_chart</span>
+          <span data-design-text-token="caption-xs" class="text-caption-xs">Insights</span>
+        </a>
+        <a href="#" class="flex flex-col items-center justify-center gap-0.5 text-text-secondary">
+          <span class="material-symbols-outlined">menu_book</span>
+          <span data-design-text-token="caption-xs" class="text-caption-xs">Istirahat</span>
+        </a>
+        <a href="#" class="flex flex-col items-center justify-center gap-0.5 text-text-secondary">
+          <span class="material-symbols-outlined">settings</span>
+          <span data-design-text-token="caption-xs" class="text-caption-xs">Pengaturan</span>
+        </a>
+      </nav>
+    </div>
+  </div>
+
+
+</body></html>

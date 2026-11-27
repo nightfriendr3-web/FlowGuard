@@ -1,0 +1,1109 @@
+<!DOCTYPE html><html lang="id" class="dark"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../aset/favicon.png">
+<link rel="apple-touch-icon" href="../aset/app-icon-192.png">
+<link rel="stylesheet" href="../aset/flowguard.css">
+<script defer src="../aset/flowguard.js"></script>
+
+  <meta charset="UTF-8">
+  <title>Pengaturan &amp; Wellness Guardrails — FlowGuard</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config" data-stitch-original-src="0e026e4ec56befb6===../../tailwind.config.js">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'bg-primary': '#0D1321',
+        'bg-navy-end': '#1B2838',
+        'bg-surface': '#141C2E',
+        'bg-elevated': '#1C263B',
+        'border-subtle': '#29354D',
+        'text-primary': '#E8E6E3',
+        'text-secondary': '#9CA3AF',
+        'primary': '#6C8EEF',
+        'on-primary': '#00174A',
+        'accent-focus': '#6C8EEF',
+        'on-accent-focus': '#00174A',
+        'accent-indigo': '#818CF8',
+        'accent-purple': '#A78BFA',
+        'on-accent-purple': '#1E0A4B',
+        'accent-teal': '#5EEAD4',
+        'on-accent-teal': '#00201C',
+        'accent-break': '#81C995',
+        'on-accent-break': '#00210E',
+        'accent-warning': '#F4A261',
+        'on-accent-warning': '#2F1400',
+        'accent-danger': '#E07A6E',
+        'on-accent-danger': '#400202',
+        'energy-1': '#E07A6E',
+        'energy-2': '#F4A261',
+        'energy-3': '#FBBF24',
+        'energy-4': '#81C995',
+        'energy-5': '#34D399',
+        'focus-container': '#182442',
+        'on-focus-container': '#DBE1FF',
+        'break-container': '#122B24',
+        'on-break-container': '#A9F3BC',
+        'warning-container': '#332011',
+        'on-warning-container': '#FFDCC4',
+        'danger-container': '#361816',
+        'on-danger-container': '#FFDAD5',
+        'sepia-bg': '#F5F0E8',
+        'sepia-text': '#3D3929',
+        'forest-bg': '#1B2A1F',
+        'forest-accent': '#7BC8A4',
+      },
+      borderRadius: {
+        'sm': '6px',
+        'DEFAULT': '10px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"JetBrains Mono"', 'sans-serif'],
+        'headline': ['"Inter"', 'sans-serif'],
+        'body': ['"Inter"', 'sans-serif'],
+        'label': ['"Inter"', 'sans-serif'],
+        'caption': ['"Inter"', 'sans-serif'],
+      },
+      fontSize: {
+        'display-timer': ['72px', { lineHeight: '80px', letterSpacing: '-1.5px', fontWeight: '700' }],
+        'display-timer-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg': ['30px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-md': ['22px', { lineHeight: '30px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '500' }],
+        'caption-xs': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '400' }],
+      },
+      transitionDuration: {
+        'state-change': '300ms',
+        'surface-enter': '400ms',
+        'surface-exit': '300ms',
+        'flow-transition': '500ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+        'flow-transition': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+        'flow-transition': 'ease-in-out',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }
+    .bg-flow-mesh {
+      background-color: #0D1321;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 20% 10%, rgba(108, 142, 239, 0.14), transparent 60%),
+        radial-gradient(ellipse 60% 50% at 85% 25%, rgba(94, 234, 212, 0.08), transparent 55%),
+        radial-gradient(ellipse 70% 60% at 50% 95%, rgba(167, 139, 250, 0.10), transparent 60%),
+        linear-gradient(160deg, #0D1321 0%, #1B2838 100%);
+    }
+    .bg-grid-pattern {
+      background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0px, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 28px);
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-flow-mesh text-text-primary font-body antialiased">
+  <div class="min-h-[1024px] bg-grid-pattern flex flex-col lg:flex-row" data-stitch-vh="min-h-[1024px]===min-h-screen">
+    <!-- Consistent 72px Glassmorphic Left Sidebar -->
+    <aside class="hidden lg:flex flex-col items-center justify-between min-h-[1024px] w-[72px] bg-bg-surface/60 backdrop-blur-xl border-r border-text-primary/10 py-gutter-lg px-gutter-xs sticky top-0 z-30 shrink-0" data-stitch-vh="min-h-[1024px]===min-h-screen">
+      <div class="flex flex-col items-center gap-gutter-xl w-full">
+        <a href="../workspace-idle/WorkspaceIdle.html" aria-label="FlowGuard Home" class="w-11 h-11 rounded-md bg-focus-container/70 border border-accent-focus/30 flex items-center justify-center text-accent-focus shadow-lg shadow-accent-focus/15">
+          <span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">shield</span>
+        </a>
+
+        <nav aria-label="Navigasi utama" class="flex flex-col items-center gap-gutter-sm w-full">
+          <a href="../workspace-idle/WorkspaceIdle.html" class="w-14 py-gutter-xs rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary flex flex-col items-center justify-center gap-0.5 transition-colors duration-state-change">
+            <span class="material-symbols-outlined">home</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs">Home</span>
+          </a>
+          <a href="../insights-dashboard/InsightsDashboard.html" class="w-14 py-gutter-xs rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary flex flex-col items-center justify-center gap-0.5 transition-colors duration-state-change">
+            <span class="material-symbols-outlined">bar_chart</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs">Insights</span>
+          </a>
+          <a href="../break-library/BreakLibrary.html" class="w-14 py-gutter-xs rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary flex flex-col items-center justify-center gap-0.5 transition-colors duration-state-change">
+            <span class="material-symbols-outlined">menu_book</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs">Istirahat</span>
+          </a>
+          <a href="#" aria-current="page" class="w-14 py-gutter-xs rounded-md bg-focus-container text-on-focus-container border border-accent-focus/40 shadow-md shadow-accent-focus/15 flex flex-col items-center justify-center gap-0.5 transition-colors duration-state-change">
+            <span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">settings</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs">Pengaturan</span>
+          </a>
+        </nav>
+      </div>
+
+      <button type="button" onclick="switchSettingsTab(&#39;profil&#39;)" aria-label="Profil Andi Pratama" class="w-10 h-10 rounded-full bg-gradient-to-br from-accent-focus to-accent-purple text-on-accent-focus font-semibold flex items-center justify-center border border-text-primary/20">
+        <span data-design-text-token="label-sm" class="text-label-sm">AP</span>
+      </button>
+    </aside>
+
+    <div class="flex-1 flex flex-col min-w-0">
+      <!-- Content Header -->
+      <header class="sticky top-0 z-20 bg-bg-surface/40 backdrop-blur-xl border-b border-text-primary/10 px-gutter-md lg:px-gutter-xl py-gutter-md flex flex-wrap items-center justify-between gap-gutter-sm">
+        <div class="flex items-center gap-gutter-sm">
+          <span class="material-symbols-outlined text-accent-focus">settings</span>
+          <h1 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Pengaturan &amp; Guardrails</h1>
+        </div>
+        <div class="flex items-center gap-gutter-sm">
+          <span class="inline-flex items-center gap-gutter-xs px-gutter-sm py-1 rounded-full bg-break-container/70 border border-accent-break/30 text-on-break-container">
+            <span class="w-2 h-2 rounded-full bg-accent-break"></span>
+            <span data-design-text-token="label-sm" class="text-label-sm">Tersimpan Lokal</span>
+          </span>
+        </div>
+      </header>
+
+      <!-- Main Settings Shell: Left Category Tabs + Right Content Panel -->
+      <main class="flex-1 max-w-6xl w-full mx-auto px-gutter-md lg:px-gutter-xl pt-gutter-lg pb-24 lg:pb-gutter-lg flex flex-col lg:flex-row gap-gutter-lg items-start">
+        <!-- Left Category Tabs (Vertical on Desktop, Horizontal Scroll on Mobile) -->
+        <aside aria-label="Kategori Pengaturan" class="w-full lg:w-64 shrink-0 lg:sticky lg:top-24">
+          <div class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-sm shadow-lg">
+            <div id="settings-tabs" role="tablist" class="flex lg:flex-col gap-1 overflow-x-auto no-scrollbar">
+              <button type="button" role="tab" data-tab="guardrails" aria-selected="true" onclick="switchSettingsTab(&#39;guardrails&#39;)" class="settings-tab-btn shrink-0 flex items-center justify-between gap-gutter-sm px-gutter-sm py-2.5 rounded-md bg-focus-container text-on-focus-container border border-accent-focus/40 text-left transition-colors duration-state-change">
+                <span class="flex items-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-[20px]">shield</span>
+                  <span data-design-text-token="label-lg" class="text-label-lg">Guardrails</span>
+                </span>
+                <span data-design-text-token="caption-xs" class="hidden lg:inline-flex px-1.5 py-0.5 rounded-sm bg-accent-focus text-on-accent-focus font-medium text-caption-xs">Inti</span>
+              </button>
+
+              <button type="button" role="tab" data-tab="adaptif" aria-selected="false" onclick="switchSettingsTab(&#39;adaptif&#39;)" class="settings-tab-btn shrink-0 flex items-center justify-between gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent text-left transition-colors duration-state-change">
+                <span class="flex items-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-[20px]">tune</span>
+                  <span data-design-text-token="label-lg" class="text-label-lg">Sesi Adaptif</span>
+                </span>
+              </button>
+
+              <button type="button" role="tab" data-tab="konteks" aria-selected="false" onclick="switchSettingsTab(&#39;konteks&#39;)" class="settings-tab-btn shrink-0 flex items-center justify-between gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent text-left transition-colors duration-state-change">
+                <span class="flex items-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+                  <span data-design-text-token="label-lg" class="text-label-lg">Mode Konteks</span>
+                </span>
+                <span data-design-text-token="caption-xs" class="hidden lg:inline-flex px-1.5 py-0.5 rounded-sm bg-accent-purple text-on-accent-purple font-medium text-caption-xs">Unik</span>
+              </button>
+
+              <button type="button" role="tab" data-tab="profil" aria-selected="false" onclick="switchSettingsTab(&#39;profil&#39;)" class="settings-tab-btn shrink-0 flex items-center justify-between gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent text-left transition-colors duration-state-change">
+                <span class="flex items-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-[20px]">person</span>
+                  <span data-design-text-token="label-lg" class="text-label-lg">Profil &amp; Persona</span>
+                </span>
+              </button>
+
+              <button type="button" role="tab" data-tab="tampilan" aria-selected="false" onclick="switchSettingsTab(&#39;tampilan&#39;)" class="settings-tab-btn shrink-0 flex items-center justify-between gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent text-left transition-colors duration-state-change">
+                <span class="flex items-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-[20px]">palette</span>
+                  <span data-design-text-token="label-lg" class="text-label-lg">Tampilan</span>
+                </span>
+              </button>
+
+              <button type="button" role="tab" data-tab="notifikasi" aria-selected="false" onclick="switchSettingsTab(&#39;notifikasi&#39;)" class="settings-tab-btn shrink-0 flex items-center justify-between gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent text-left transition-colors duration-state-change">
+                <span class="flex items-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-[20px]">notifications</span>
+                  <span data-design-text-token="label-lg" class="text-label-lg">Notifikasi</span>
+                </span>
+              </button>
+
+              <button type="button" role="tab" data-tab="soundscape" aria-selected="false" onclick="switchSettingsTab(&#39;soundscape&#39;)" class="settings-tab-btn shrink-0 flex items-center justify-between gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent text-left transition-colors duration-state-change">
+                <span class="flex items-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-[20px]">graphic_eq</span>
+                  <span data-design-text-token="label-lg" class="text-label-lg">Soundscape</span>
+                </span>
+              </button>
+
+              <button type="button" role="tab" data-tab="posture" aria-selected="false" onclick="switchSettingsTab(&#39;posture&#39;)" class="settings-tab-btn shrink-0 flex items-center justify-between gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent text-left transition-colors duration-state-change">
+                <span class="flex items-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-[20px]">accessibility_new</span>
+                  <span data-design-text-token="label-lg" class="text-label-lg">Posture Check</span>
+                </span>
+              </button>
+
+              <button type="button" role="tab" data-tab="motivasi" aria-selected="false" onclick="switchSettingsTab(&#39;motivasi&#39;)" class="settings-tab-btn shrink-0 flex items-center justify-between gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent text-left transition-colors duration-state-change">
+                <span class="flex items-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-[20px]">emoji_events</span>
+                  <span data-design-text-token="label-lg" class="text-label-lg">Motivasi</span>
+                </span>
+              </button>
+
+              <button type="button" role="tab" data-tab="data" aria-selected="false" onclick="switchSettingsTab(&#39;data&#39;)" class="settings-tab-btn shrink-0 flex items-center justify-between gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent text-left transition-colors duration-state-change">
+                <span class="flex items-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-[20px]">database</span>
+                  <span data-design-text-token="label-lg" class="text-label-lg">Data &amp; Privasi</span>
+                </span>
+              </button>
+
+              <button type="button" role="tab" data-tab="bantuan" aria-selected="false" onclick="switchSettingsTab(&#39;bantuan&#39;)" class="settings-tab-btn shrink-0 flex items-center justify-between gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent text-left transition-colors duration-state-change">
+                <span class="flex items-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-[20px]">help</span>
+                  <span data-design-text-token="label-lg" class="text-label-lg">Bantuan</span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Right Tab Panels Container -->
+        <div class="flex-1 min-w-0 w-full flex flex-col gap-gutter-lg">
+
+          <!-- PANEL 2: WELLNESS GUARDRAILS (Default Active) -->
+          <section id="panel-guardrails" role="tabpanel" class="settings-panel flex flex-col gap-gutter-lg">
+            <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-lg shadow-lg">
+              <div class="flex flex-wrap items-center justify-between gap-gutter-sm">
+                <div>
+                  <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Wellness Guardrails</h2>
+                  <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Pagar pelindung otomatis agar fokus tetap sehat tanpa burnout.</p>
+                </div>
+                <span data-design-text-token="label-sm" class="px-gutter-sm py-1 rounded-full bg-focus-container text-on-focus-container border border-accent-focus/30 text-label-sm">Aktif Melindungi</span>
+              </div>
+
+              <!-- Daily work limit slider -->
+              <div class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 flex flex-col gap-gutter-sm">
+                <div class="flex items-center justify-between gap-gutter-sm">
+                  <span data-design-text-token="body-md" class="text-body-md text-text-primary">Batas jam kerja harian</span>
+                  <span id="work-limit-label" data-design-text-token="label-lg" class="font-display text-label-lg text-accent-focus tabular-nums">8 jam</span>
+                </div>
+                <input type="range" min="4" max="12" value="8" oninput="document.getElementById(&#39;work-limit-label&#39;).textContent = this.value + &#39; jam&#39;" class="w-full h-2 rounded-full bg-bg-primary accent-accent-focus cursor-pointer">
+                <div class="flex justify-between text-caption-xs text-text-secondary">
+                  <span>4 jam (Ringan)</span>
+                  <span>8 jam (Disarankan)</span>
+                  <span>12 jam</span>
+                </div>
+              </div>
+
+              <!-- Soft Stop vs Hard Stop -->
+              <div class="flex flex-col gap-gutter-sm">
+                <span data-design-text-token="body-md" class="text-body-md text-text-primary">Mode saat batas harian tercapai</span>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter-md">
+                  <label class="p-gutter-md rounded-md bg-focus-container/60 border border-accent-focus/40 cursor-pointer flex items-center gap-gutter-sm">
+                    <input type="radio" name="stop-mode" checked class="text-accent-focus bg-bg-primary border-border-subtle focus:ring-accent-focus shrink-0">
+                    <div>
+                      <p data-design-text-token="label-lg" class="text-label-lg text-text-primary">Soft Stop (Peringatan)</p>
+                      <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary text-balance">Beri pengingat lembut tanpa mengunci layar.</p>
+                    </div>
+                  </label>
+                  <label class="p-gutter-md rounded-md bg-bg-elevated/40 border border-text-primary/10 hover:border-accent-warning/40 cursor-pointer flex items-center gap-gutter-sm">
+                    <input type="radio" name="stop-mode" class="text-accent-warning bg-bg-primary border-border-subtle focus:ring-accent-warning shrink-0">
+                    <div>
+                      <p data-design-text-token="label-lg" class="text-label-lg text-text-primary">Hard Stop (Kunci Layar)</p>
+                      <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary text-balance">Kunci sesi baru; butuh Override Darurat untuk lanjut.</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Digital Sunset & Consecutive Sessions -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-md">
+                <div class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 flex flex-col justify-between gap-gutter-sm">
+                  <div class="flex items-center justify-between gap-gutter-sm">
+                    <div class="flex items-center gap-gutter-sm">
+                      <span class="material-symbols-outlined text-accent-warning">nights_stay</span>
+                      <span data-design-text-token="body-md" class="text-body-md text-text-primary">Digital Sunset</span>
+                    </div>
+                    <input type="checkbox" checked aria-label="Aktifkan Digital Sunset" class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus focus:ring-accent-focus">
+                  </div>
+                  <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Jam malam digital: sarankan berhenti setelah jam ini.</p>
+                  <select aria-label="Jam Digital Sunset" class="w-full rounded-md bg-bg-primary border border-border-subtle text-text-primary text-label-lg px-gutter-sm py-2">
+                    <option>20:30</option>
+                    <option selected>21:30</option>
+                    <option>22:00</option>
+                    <option>23:00</option>
+                  </select>
+                </div>
+
+                <div class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 flex flex-col justify-between gap-gutter-sm">
+                  <div class="flex items-center gap-gutter-sm">
+                    <span class="material-symbols-outlined text-accent-teal">repeat</span>
+                    <span data-design-text-token="body-md" class="text-body-md text-text-primary">Batas sesi beruntun</span>
+                  </div>
+                  <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Maksimal sesi fokus sebelum wajib jeda panjang (15 menit).</p>
+                  <select aria-label="Batas sesi beruntun" class="w-full rounded-md bg-bg-primary border border-border-subtle text-text-primary text-label-lg px-gutter-sm py-2">
+                    <option>2 sesi beruntun</option>
+                    <option selected>3 sesi beruntun</option>
+                    <option>4 sesi beruntun</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Micro-break & Hydration Reminders -->
+              <div class="flex flex-col gap-gutter-sm pt-gutter-sm border-t border-text-primary/10">
+                <h3 data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Pengingat Kesehatan Mikro</h3>
+
+                <div class="flex flex-wrap items-center justify-between gap-gutter-sm p-gutter-sm rounded-md bg-bg-elevated/40 border border-text-primary/10">
+                  <label class="flex items-center gap-gutter-sm cursor-pointer min-h-[44px]">
+                    <input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus focus:ring-accent-focus">
+                    <span data-design-text-token="body-md" class="text-body-md text-text-primary">Relaksasi Mata 20-20-20</span>
+                  </label>
+                  <select aria-label="Interval 20-20-20" class="rounded-md bg-bg-primary border border-border-subtle text-text-primary text-label-sm px-gutter-sm py-1.5">
+                    <option>Setiap 15 menit</option>
+                    <option selected>Setiap 20 menit</option>
+                    <option>Setiap 30 menit</option>
+                  </select>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-between gap-gutter-sm p-gutter-sm rounded-md bg-bg-elevated/40 border border-text-primary/10">
+                  <label class="flex items-center gap-gutter-sm cursor-pointer min-h-[44px]">
+                    <input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus focus:ring-accent-focus">
+                    <span data-design-text-token="body-md" class="text-body-md text-text-primary">Pengingat Minum Air</span>
+                  </label>
+                  <select aria-label="Interval Minum Air" class="rounded-md bg-bg-primary border border-border-subtle text-text-primary text-label-sm px-gutter-sm py-1.5">
+                    <option>Setiap 30 menit</option>
+                    <option selected>Setiap 45 menit</option>
+                    <option>Setiap 60 menit</option>
+                  </select>
+                </div>
+
+                <div class="flex flex-wrap items-center justify-between gap-gutter-sm p-gutter-sm rounded-md bg-bg-elevated/40 border border-text-primary/10">
+                  <label class="flex items-center gap-gutter-sm cursor-pointer min-h-[44px]">
+                    <input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus focus:ring-accent-focus">
+                    <span data-design-text-token="body-md" class="text-body-md text-text-primary">Peregangan Leher &amp; Bahu</span>
+                  </label>
+                  <select aria-label="Interval Peregangan" class="rounded-md bg-bg-primary border border-border-subtle text-text-primary text-label-sm px-gutter-sm py-1.5">
+                    <option>Setiap 45 menit</option>
+                    <option selected>Setiap 60 menit</option>
+                    <option>Setiap 90 menit</option>
+                  </select>
+                </div>
+              </div>
+            </article>
+
+            <!-- Override Darurat Card -->
+            <article class="bg-warning-container/40 backdrop-blur-xl border border-accent-warning/30 rounded-lg p-gutter-lg flex flex-wrap items-center justify-between gap-gutter-md shadow-lg">
+              <div class="flex items-start gap-gutter-md max-w-xl">
+                <div class="w-11 h-11 rounded-md bg-warning-container border border-accent-warning/40 flex items-center justify-center text-accent-warning shrink-0">
+                  <span class="material-symbols-outlined">lock_open</span>
+                </div>
+                <div>
+                  <h3 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Override Darurat</h3>
+                  <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Membuka kunci Hard Stop dengan menuliskan alasan. Setiap alasan tercatat otomatis di laporan Insights.</p>
+                </div>
+              </div>
+              <button type="button" onclick="openModal(&#39;modal-override&#39;)" class="min-h-[44px] px-gutter-md rounded-md bg-warning-container border border-accent-warning/50 text-on-warning-container hover:opacity-90">
+                <span data-design-text-token="label-lg" class="text-label-lg">Buka Override Darurat</span>
+              </button>
+            </article>
+          </section>
+
+          <!-- PANEL 3: SESI ADAPTIF -->
+          <section id="panel-adaptif" role="tabpanel" class="settings-panel hidden flex flex-col gap-gutter-lg">
+            <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-lg shadow-lg">
+              <div class="flex flex-wrap items-center justify-between gap-gutter-md">
+                <div>
+                  <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Sesi Adaptif</h2>
+                  <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Menyesuaikan durasi fokus &amp; jeda otomatis berdasarkan energi check-in.</p>
+                </div>
+                <label class="inline-flex items-center gap-gutter-sm px-gutter-md py-2 rounded-full bg-focus-container border border-accent-focus/40 cursor-pointer">
+                  <input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus focus:ring-accent-focus">
+                  <span data-design-text-token="label-lg" class="text-label-lg text-on-focus-container">Adaptif ON</span>
+                </label>
+              </div>
+
+              <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary px-gutter-sm py-2 rounded-md bg-bg-elevated/40 border border-text-primary/10">
+                Catatan: Jika dimatikan (OFF), timer berjalan tetap (statis) — berguna untuk demo dan perbandingan data.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-md">
+                <label class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 flex flex-col gap-gutter-xs">
+                  <div class="flex justify-between">
+                    <span data-design-text-token="body-md" class="text-body-md text-text-primary">Durasi default sesi</span>
+                    <span id="default-focus-label" data-design-text-token="label-lg" class="font-display text-label-lg text-accent-focus">35 menit</span>
+                  </div>
+                  <input type="range" min="15" max="60" step="5" value="35" oninput="document.getElementById(&#39;default-focus-label&#39;).textContent = this.value + &#39; menit&#39;" class="w-full h-2 rounded-full bg-bg-primary accent-accent-focus cursor-pointer">
+                </label>
+
+                <label class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 flex flex-col gap-gutter-xs">
+                  <div class="flex justify-between">
+                    <span data-design-text-token="body-md" class="text-body-md text-text-primary">Durasi default jeda</span>
+                    <span id="default-break-label" data-design-text-token="label-lg" class="font-display text-label-lg text-accent-break">5 menit</span>
+                  </div>
+                  <input type="range" min="3" max="15" step="1" value="5" oninput="document.getElementById(&#39;default-break-label&#39;).textContent = this.value + &#39; menit&#39;" class="w-full h-2 rounded-full bg-bg-primary accent-accent-break cursor-pointer">
+                </label>
+              </div>
+
+              <!-- Sensitivitas Adaptif -->
+              <div class="flex flex-col gap-gutter-sm">
+                <span data-design-text-token="body-md" class="text-body-md text-text-primary">Sensitivitas adaptif</span>
+                <div class="grid grid-cols-3 gap-gutter-sm">
+                  <button type="button" class="min-h-[44px] rounded-md bg-bg-elevated/50 border border-text-primary/10 text-text-secondary hover:text-text-primary text-label-lg">Santai</button>
+                  <button type="button" aria-pressed="true" class="min-h-[44px] rounded-md bg-focus-container border border-accent-focus text-on-focus-container text-label-lg">Normal</button>
+                  <button type="button" class="min-h-[44px] rounded-md bg-bg-elevated/50 border border-text-primary/10 text-text-secondary hover:text-text-primary text-label-lg">Ketat</button>
+                </div>
+              </div>
+
+              <!-- Pratinjau Aturan -->
+              <div class="flex flex-col gap-gutter-sm">
+                <span data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Pratinjau aturan adaptif saat ini</span>
+                <div class="overflow-hidden rounded-md border border-text-primary/10 bg-bg-primary/50">
+                  <table class="w-full text-left border-collapse">
+                    <thead>
+                      <tr class="border-b border-text-primary/10 bg-bg-elevated/50 text-label-sm text-text-secondary">
+                        <th class="py-2.5 px-gutter-md">Skor Energi</th>
+                        <th class="py-2.5 px-gutter-md">Durasi Fokus</th>
+                        <th class="py-2.5 px-gutter-md">Durasi Jeda</th>
+                      </tr>
+                    </thead>
+                    <tbody class="divide-y divide-text-primary/10 text-label-lg">
+                      <tr>
+                        <td class="py-2.5 px-gutter-md text-energy-5">Energi 4–5 (Segar)</td>
+                        <td class="py-2.5 px-gutter-md font-display text-text-primary">40 menit</td>
+                        <td class="py-2.5 px-gutter-md font-display text-text-secondary">5 menit</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2.5 px-gutter-md text-energy-3">Energi 3 (Cukup)</td>
+                        <td class="py-2.5 px-gutter-md font-display text-text-primary">30 menit</td>
+                        <td class="py-2.5 px-gutter-md font-display text-text-secondary">7 menit</td>
+                      </tr>
+                      <tr>
+                        <td class="py-2.5 px-gutter-md text-energy-1">Energi 1–2 (Lelah)</td>
+                        <td class="py-2.5 px-gutter-md font-display text-text-primary">20 menit</td>
+                        <td class="py-2.5 px-gutter-md font-display text-text-secondary">10 menit</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+
+              <div class="flex justify-end">
+                <button type="button" class="min-h-[44px] px-gutter-md rounded-md bg-bg-elevated/70 border border-text-primary/10 text-text-primary hover:bg-bg-elevated">
+                  <span data-design-text-token="label-lg" class="text-label-lg">Reset ke Default</span>
+                </button>
+              </div>
+            </article>
+          </section>
+
+          <!-- PANEL 4: MODE KONTEKS (UNIK) -->
+          <section id="panel-konteks" role="tabpanel" class="settings-panel hidden flex flex-col gap-gutter-lg">
+            <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-lg shadow-lg">
+              <div class="flex flex-wrap items-center justify-between gap-gutter-sm">
+                <div>
+                  <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Mode Konteks</h2>
+                  <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Satu ketukan untuk mengubah ritme fokus, batas kelelahan, dan frekuensi jeda sekaligus.</p>
+                </div>
+                <span data-design-text-token="label-sm" class="px-gutter-sm py-1 rounded-full bg-accent-purple/20 border border-accent-purple/40 text-accent-purple text-label-sm">Preset Pintar</span>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-md">
+                <button type="button" class="text-left p-gutter-md rounded-lg bg-bg-elevated/50 border border-text-primary/10 hover:border-accent-focus/50 flex flex-col gap-gutter-sm transition-colors duration-state-change">
+                  <div class="flex items-center justify-between w-full">
+                    <span class="w-10 h-10 rounded-md bg-focus-container text-accent-focus flex items-center justify-center">
+                      <span class="material-symbols-outlined">school</span>
+                    </span>
+                    <span data-design-text-token="label-sm" class="text-label-sm text-text-secondary">45m / 5m</span>
+                  </div>
+                  <h3 data-design-text-token="body-lg" class="font-semibold text-body-lg text-text-primary">Mode Ujian</h3>
+                  <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Sesi lebih panjang dengan jeda singkat untuk pendalaman materi.</p>
+                </button>
+
+                <button type="button" aria-pressed="true" class="text-left p-gutter-md rounded-lg bg-focus-container/70 border border-accent-focus shadow-lg shadow-accent-focus/15 flex flex-col gap-gutter-sm transition-colors duration-state-change">
+                  <div class="flex items-center justify-between w-full">
+                    <span class="w-10 h-10 rounded-md bg-warning-container text-accent-warning flex items-center justify-center">
+                      <span class="material-symbols-outlined">bolt</span>
+                    </span>
+                    <span data-design-text-token="label-sm" class="px-2 py-0.5 rounded-full bg-accent-focus text-on-accent-focus text-label-sm">Aktif</span>
+                  </div>
+                  <h3 data-design-text-token="body-lg" class="font-semibold text-body-lg text-text-primary">Mode Deadline</h3>
+                  <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Peringatan kelelahan lebih ketat agar performa tetap stabil hingga selesai.</p>
+                </button>
+
+                <button type="button" class="text-left p-gutter-md rounded-lg bg-bg-elevated/50 border border-text-primary/10 hover:border-accent-break/50 flex flex-col gap-gutter-sm transition-colors duration-state-change">
+                  <div class="flex items-center justify-between w-full">
+                    <span class="w-10 h-10 rounded-md bg-break-container text-accent-break flex items-center justify-center">
+                      <span class="material-symbols-outlined">spa</span>
+                    </span>
+                    <span data-design-text-token="label-sm" class="text-label-sm text-text-secondary">20m / 10m</span>
+                  </div>
+                  <h3 data-design-text-token="body-lg" class="font-semibold text-body-lg text-text-primary">Mode Santai</h3>
+                  <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Sesi pendek dengan banyak jeda untuk pekerjaan ringan atau eksplorasi.</p>
+                </button>
+
+                <button type="button" class="text-left p-gutter-md rounded-lg bg-bg-elevated/50 border border-text-primary/10 hover:border-accent-teal/50 flex flex-col gap-gutter-sm transition-colors duration-state-change">
+                  <div class="flex items-center justify-between w-full">
+                    <span class="w-10 h-10 rounded-md bg-accent-teal/15 text-accent-teal flex items-center justify-center">
+                      <span class="material-symbols-outlined">healing</span>
+                    </span>
+                    <span data-design-text-token="label-sm" class="text-label-sm text-accent-teal">-30% Beban</span>
+                  </div>
+                  <h3 data-design-text-token="body-lg" class="font-semibold text-body-lg text-text-primary">Mode Recovery</h3>
+                  <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Setelah burnout, beban harian dan durasi sesi diturunkan otomatis.</p>
+                </button>
+              </div>
+            </article>
+          </section>
+
+          <!-- PANEL 1: PROFIL & PERSONA -->
+          <section id="panel-profil" role="tabpanel" class="settings-panel hidden flex flex-col gap-gutter-lg">
+            <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-lg shadow-lg">
+              <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Profil &amp; Persona</h2>
+
+              <div class="flex flex-wrap items-center gap-gutter-md p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-accent-focus to-accent-purple text-on-accent-focus font-headline text-headline-md flex items-center justify-center shrink-0">AP</div>
+                <div class="flex-1 min-w-[200px] flex flex-col gap-gutter-xs">
+                  <label data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Nama Panggilan (Sapaan di Home)</label>
+                  <input type="text" value="Andi" class="w-full rounded-md bg-bg-primary border border-border-subtle text-text-primary text-body-md px-gutter-sm py-2">
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-gutter-sm">
+                <span data-design-text-token="body-md" class="text-body-md text-text-primary">Peran Anda (menentukan saran jeda &amp; gaya bahasa)</span>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-gutter-sm">
+                  <button type="button" class="min-h-[44px] px-gutter-sm py-2 rounded-md bg-bg-elevated/50 border border-text-primary/10 text-text-secondary hover:text-text-primary text-label-lg">Pelajar</button>
+                  <button type="button" aria-pressed="true" class="min-h-[44px] px-gutter-sm py-2 rounded-md bg-focus-container border border-accent-focus text-on-focus-container text-label-lg">Mahasiswa</button>
+                  <button type="button" class="min-h-[44px] px-gutter-sm py-2 rounded-md bg-bg-elevated/50 border border-text-primary/10 text-text-secondary hover:text-text-primary text-label-lg">Pekerja Remote</button>
+                  <button type="button" class="min-h-[44px] px-gutter-sm py-2 rounded-md bg-bg-elevated/50 border border-text-primary/10 text-text-secondary hover:text-text-primary text-label-lg">Freelancer</button>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-gutter-sm">
+                <span data-design-text-token="body-md" class="text-body-md text-text-primary">Tujuan Utama (mengatur isi rekomendasi)</span>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-gutter-sm">
+                  <button type="button" class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 text-left hover:border-accent-focus/40">
+                    <p data-design-text-token="label-lg" class="text-label-lg text-text-primary">Fokus Belajar</p>
+                    <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Optimalkan retensi &amp; sesi dalam</p>
+                  </button>
+                  <button type="button" class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 text-left hover:border-accent-focus/40">
+                    <p data-design-text-token="label-lg" class="text-label-lg text-text-primary">Kurangi Lelah Mata</p>
+                    <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Prioritaskan jeda visual 20-20-20</p>
+                  </button>
+                  <button type="button" aria-pressed="true" class="p-gutter-md rounded-md bg-focus-container border border-accent-focus text-left">
+                    <p data-design-text-token="label-lg" class="text-label-lg text-on-focus-container">Cegah Burnout</p>
+                    <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Jaga energi stabil seharian</p>
+                  </button>
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- PANEL 5: TAMPILAN -->
+          <section id="panel-tampilan" role="tabpanel" class="settings-panel hidden flex flex-col gap-gutter-lg">
+            <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-lg shadow-lg">
+              <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Tampilan &amp; Aksesibilitas</h2>
+
+              <div class="flex flex-col gap-gutter-sm">
+                <span data-design-text-token="body-md" class="text-body-md text-text-primary">Tema Warna</span>
+                <div class="grid grid-cols-2 sm:grid-cols-5 gap-gutter-sm">
+                  <button type="button" aria-pressed="true" class="p-gutter-sm rounded-md bg-bg-primary border border-accent-focus text-text-primary flex items-center gap-gutter-xs">
+                    <span class="material-symbols-outlined text-accent-focus text-[20px]">dark_mode</span>
+                    <span data-design-text-token="label-lg" class="text-label-lg">Dark</span>
+                  </button>
+                  <button type="button" class="p-gutter-sm rounded-md bg-sepia-bg border border-border-subtle text-sepia-text flex items-center gap-gutter-xs">
+                    <span class="material-symbols-outlined text-[20px]">wb_sunny</span>
+                    <span data-design-text-token="label-lg" class="text-label-lg">Sepia</span>
+                  </button>
+                  <button type="button" class="p-gutter-sm rounded-md bg-forest-bg border border-border-subtle text-forest-accent flex items-center gap-gutter-xs">
+                    <span class="material-symbols-outlined text-[20px]">forest</span>
+                    <span data-design-text-token="label-lg" class="text-label-lg">Forest</span>
+                  </button>
+                  <button type="button" class="p-gutter-sm rounded-md bg-bg-elevated/70 border border-border-subtle text-text-primary flex items-center gap-gutter-xs">
+                    <span class="material-symbols-outlined text-[20px]">light_mode</span>
+                    <span data-design-text-token="label-lg" class="text-label-lg">Terang</span>
+                  </button>
+                  <button type="button" class="p-gutter-sm rounded-md bg-bg-elevated/70 border border-border-subtle text-text-primary flex items-center gap-gutter-xs">
+                    <span class="material-symbols-outlined text-[20px]">schedule</span>
+                    <span data-design-text-token="label-lg" class="text-label-lg">Otomatis</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Blue Light Filter -->
+              <div class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 flex flex-wrap items-center justify-between gap-gutter-sm">
+                <div>
+                  <p data-design-text-token="body-md" class="text-body-md text-text-primary">Filter Cahaya Biru Terjadwal</p>
+                  <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Hangatkan warna layar otomatis pada malam hari (20:00 – 06:00).</p>
+                </div>
+                <input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus focus:ring-accent-focus">
+              </div>
+
+              <!-- Accessibility -->
+              <div class="flex flex-col gap-gutter-sm">
+                <span data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Aksesibilitas &amp; Kenyamanan</span>
+                <div class="flex flex-wrap items-center justify-between gap-gutter-sm p-gutter-sm rounded-md bg-bg-elevated/40 border border-text-primary/10">
+                  <span data-design-text-token="body-md" class="text-body-md text-text-primary">Ukuran Font</span>
+                  <select aria-label="Ukuran Font" class="rounded-md bg-bg-primary border border-border-subtle text-text-primary text-label-lg px-gutter-sm py-1.5">
+                    <option>Kecil (14px)</option>
+                    <option selected>Normal (16px)</option>
+                    <option>Besar (18px)</option>
+                  </select>
+                </div>
+                <label class="flex items-center justify-between min-h-[44px] px-gutter-sm rounded-md bg-bg-elevated/40 border border-text-primary/10 cursor-pointer">
+                  <span data-design-text-token="body-md" class="text-body-md text-text-primary">Mode Kontras Tinggi</span>
+                  <input type="checkbox" class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus focus:ring-accent-focus">
+                </label>
+                <label class="flex items-center justify-between min-h-[44px] px-gutter-sm rounded-md bg-bg-elevated/40 border border-text-primary/10 cursor-pointer">
+                  <span data-design-text-token="body-md" class="text-body-md text-text-primary">Kurangi Animasi (Reduce Motion)</span>
+                  <input type="checkbox" class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus focus:ring-accent-focus">
+                </label>
+                <label class="flex items-center justify-between min-h-[44px] px-gutter-sm rounded-md bg-bg-elevated/40 border border-text-primary/10 cursor-pointer">
+                  <span data-design-text-token="body-md" class="text-body-md text-text-primary">Flow Mode otomatis saat fokus (sembunyikan menu)</span>
+                  <input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus focus:ring-accent-focus">
+                </label>
+              </div>
+            </article>
+          </section>
+
+          <!-- PANEL 6: NOTIFIKASI -->
+          <section id="panel-notifikasi" role="tabpanel" class="settings-panel hidden flex flex-col gap-gutter-lg">
+            <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-lg shadow-lg">
+              <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Notifikasi &amp; Jam Tenang</h2>
+
+              <div class="flex flex-col gap-gutter-sm">
+                <label class="flex items-center justify-between min-h-[44px] p-gutter-sm rounded-md bg-bg-elevated/40 border border-text-primary/10 cursor-pointer">
+                  <span data-design-text-token="body-md" class="text-body-md text-text-primary">Web Push Notifications</span>
+                  <input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus focus:ring-accent-focus">
+                </label>
+                <label class="flex items-center justify-between min-h-[44px] p-gutter-sm rounded-md bg-bg-elevated/40 border border-text-primary/10 cursor-pointer">
+                  <span data-design-text-token="body-md" class="text-body-md text-text-primary">Notifikasi dalam aplikasi (Banner lembut)</span>
+                  <input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus focus:ring-accent-focus">
+                </label>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-md">
+                <div class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 flex flex-col gap-gutter-xs">
+                  <label data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Suara Pengingat</label>
+                  <select class="w-full rounded-md bg-bg-primary border border-border-subtle text-text-primary text-body-md px-gutter-sm py-2">
+                    <option selected>Lonceng lembut</option>
+                    <option>Tetesan air</option>
+                    <option>Napas tenang</option>
+                    <option>Tanpa suara</option>
+                  </select>
+                </div>
+
+                <div class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 flex flex-col gap-gutter-xs">
+                  <span data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Gaya Pengingat</span>
+                  <div class="grid grid-cols-2 gap-gutter-sm">
+                    <button type="button" aria-pressed="true" class="min-h-[44px] rounded-md bg-focus-container border border-accent-focus text-on-focus-container text-label-lg">Halus</button>
+                    <button type="button" class="min-h-[44px] rounded-md bg-bg-primary border border-border-subtle text-text-secondary text-label-lg">Tegas</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quiet Hours & Daily Check-in Reminder -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-md">
+                <div class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 flex flex-col gap-gutter-sm">
+                  <div class="flex items-center justify-between">
+                    <span data-design-text-token="body-md" class="text-body-md text-text-primary">Jam Tenang (Quiet Hours)</span>
+                    <input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus focus:ring-accent-focus">
+                  </div>
+                  <div class="flex items-center gap-gutter-sm text-label-lg text-text-secondary">
+                    <input type="time" value="22:00" class="rounded-md bg-bg-primary border border-border-subtle text-text-primary px-2 py-1">
+                    <span>s/d</span>
+                    <input type="time" value="07:00" class="rounded-md bg-bg-primary border border-border-subtle text-text-primary px-2 py-1">
+                  </div>
+                </div>
+
+                <div class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 flex flex-col gap-gutter-sm">
+                  <div class="flex items-center justify-between">
+                    <span data-design-text-token="body-md" class="text-body-md text-text-primary">Pengingat Check-in Harian</span>
+                    <input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus focus:ring-accent-focus">
+                  </div>
+                  <input type="time" value="08:30" class="w-full rounded-md bg-bg-primary border border-border-subtle text-text-primary px-gutter-sm py-1.5">
+                </div>
+              </div>
+            </article>
+          </section>
+
+          <!-- PANEL 7: SOUNDSCAPE PRESETS -->
+          <section id="panel-soundscape" role="tabpanel" class="settings-panel hidden flex flex-col gap-gutter-lg">
+            <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-lg shadow-lg">
+              <div class="flex flex-wrap items-center justify-between gap-gutter-sm">
+                <div>
+                  <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Soundscape Presets</h2>
+                  <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Audio ambient berlisensi bebas (CC0) untuk membantu fokus.</p>
+                </div>
+                <button type="button" onclick="openModal(&#39;modal-preset&#39;)" class="min-h-[44px] px-gutter-md rounded-md bg-gradient-to-r from-accent-focus to-accent-purple text-on-accent-focus font-semibold shadow-md shadow-accent-focus/20">
+                  <span data-design-text-token="label-lg" class="text-label-lg">+ Tambah Preset Baru</span>
+                </button>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter-md">
+                <button type="button" aria-pressed="true" class="p-gutter-md rounded-md bg-focus-container/70 border border-accent-focus text-left flex flex-col gap-1">
+                  <span data-design-text-token="body-md" class="font-semibold text-body-md text-text-primary">Nulis Skripsi</span>
+                  <span data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Hujan 60% + White Noise 25%</span>
+                </button>
+                <button type="button" class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 text-left flex flex-col gap-1 hover:border-accent-focus/40">
+                  <span data-design-text-token="body-md" class="font-semibold text-body-md text-text-primary">Coding Malam</span>
+                  <span data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Lo-fi 55% + Perapian 30%</span>
+                </button>
+              </div>
+
+              <!-- Layer Mixer -->
+              <div class="flex flex-col gap-gutter-md p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10">
+                <h3 data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Mixer Per Lapisan</h3>
+                <label class="flex items-center justify-between gap-gutter-md">
+                  <span data-design-text-token="body-md" class="w-28 text-body-md text-text-primary">Hujan</span>
+                  <input type="range" min="0" max="100" value="60" class="flex-1 h-2 rounded-full bg-bg-primary accent-accent-focus">
+                  <span data-design-text-token="label-sm" class="w-10 text-right font-display text-label-sm text-text-secondary">60%</span>
+                </label>
+                <label class="flex items-center justify-between gap-gutter-md">
+                  <span data-design-text-token="body-md" class="w-28 text-body-md text-text-primary">Lo-fi</span>
+                  <input type="range" min="0" max="100" value="40" class="flex-1 h-2 rounded-full bg-bg-primary accent-accent-purple">
+                  <span data-design-text-token="label-sm" class="w-10 text-right font-display text-label-sm text-text-secondary">40%</span>
+                </label>
+                <label class="flex items-center justify-between gap-gutter-md">
+                  <span data-design-text-token="body-md" class="w-28 text-body-md text-text-primary">White Noise</span>
+                  <input type="range" min="0" max="100" value="25" class="flex-1 h-2 rounded-full bg-bg-primary accent-accent-teal">
+                  <span data-design-text-token="label-sm" class="w-10 text-right font-display text-label-sm text-text-secondary">25%</span>
+                </label>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-sm">
+                <label class="flex items-center justify-between p-gutter-sm rounded-md bg-bg-elevated/40 border border-text-primary/10 cursor-pointer">
+                  <span data-design-text-token="label-lg" class="text-label-lg text-text-primary">Auto-play sesi</span>
+                  <input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus">
+                </label>
+                <label class="flex items-center justify-between p-gutter-sm rounded-md bg-bg-elevated/40 border border-text-primary/10 cursor-pointer">
+                  <span data-design-text-token="label-lg" class="text-label-lg text-text-primary">Fade in/out</span>
+                  <input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus">
+                </label>
+                <select aria-label="Timer berhenti otomatis" class="rounded-md bg-bg-primary border border-border-subtle text-text-primary text-label-lg px-gutter-sm py-2">
+                  <option selected>Stop: Ikuti sesi</option>
+                  <option>Stop: 30 menit</option>
+                  <option>Stop: 60 menit</option>
+                </select>
+              </div>
+            </article>
+          </section>
+
+          <!-- PANEL 8: POSTURE CHECK-LITE -->
+          <section id="panel-posture" role="tabpanel" class="settings-panel hidden flex flex-col gap-gutter-lg">
+            <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-lg shadow-lg">
+              <div class="flex flex-wrap items-center justify-between gap-gutter-sm">
+                <div>
+                  <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Posture Check-lite</h2>
+                  <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Deteksi postur membungkuk secara ringan dan opsional.</p>
+                </div>
+                <label class="inline-flex items-center gap-gutter-sm px-gutter-md py-2 rounded-full bg-bg-elevated/70 border border-text-primary/10 cursor-pointer">
+                  <input type="checkbox" class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus">
+                  <span data-design-text-token="label-lg" class="text-label-lg text-text-primary">Aktifkan</span>
+                </label>
+              </div>
+
+              <div class="p-gutter-md rounded-md bg-break-container/50 border border-accent-break/30 flex items-center gap-gutter-sm">
+                <span class="material-symbols-outlined text-accent-break">verified_user</span>
+                <p data-design-text-token="label-lg" class="text-label-lg text-on-break-container">Video tidak direkam atau dikirim. Semua analisis berjalan lokal di browser.</p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-md">
+                <div class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 flex items-center justify-between gap-gutter-sm">
+                  <div>
+                    <p data-design-text-token="body-md" class="text-body-md text-text-primary">Status Izin Kamera</p>
+                    <p data-design-text-token="caption-xs" class="text-caption-xs text-accent-warning">Belum diizinkan</p>
+                  </div>
+                  <button type="button" class="min-h-[44px] px-gutter-sm rounded-md bg-bg-primary border border-border-subtle text-label-lg text-text-primary">Minta Izin</button>
+                </div>
+
+                <div class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 flex items-center justify-between gap-gutter-sm">
+                  <div>
+                    <p data-design-text-token="body-md" class="text-body-md text-text-primary">Kalibrasi Postur Tegak</p>
+                    <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Duduk tegak lalu tekan tombol</p>
+                  </div>
+                  <button type="button" class="min-h-[44px] px-gutter-sm rounded-md bg-focus-container border border-accent-focus/40 text-label-lg text-on-focus-container">Kalibrasi</button>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter-md">
+                <label class="flex flex-col gap-gutter-xs">
+                  <span data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Sensitivitas Deteksi</span>
+                  <select class="rounded-md bg-bg-primary border border-border-subtle text-text-primary text-body-md px-gutter-sm py-2">
+                    <option>Rendah</option>
+                    <option selected>Normal</option>
+                    <option>Tinggi</option>
+                  </select>
+                </label>
+                <label class="flex flex-col gap-gutter-xs">
+                  <span data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Interval Cek</span>
+                  <select class="rounded-md bg-bg-primary border border-border-subtle text-text-primary text-body-md px-gutter-sm py-2">
+                    <option>Setiap 5 menit</option>
+                    <option selected>Setiap 10 menit</option>
+                    <option>Setiap 15 menit</option>
+                  </select>
+                </label>
+              </div>
+            </article>
+          </section>
+
+          <!-- PANEL 9: MOTIVASI & PERSONALISASI -->
+          <section id="panel-motivasi" role="tabpanel" class="settings-panel hidden flex flex-col gap-gutter-lg">
+            <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-lg shadow-lg">
+              <div class="flex flex-wrap items-center justify-between gap-gutter-sm">
+                <div>
+                  <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Motivasi &amp; Personalisasi</h2>
+                  <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Menghargai disiplin istirahat, bukan jam kerja terlama.</p>
+                </div>
+                <span data-design-text-token="label-sm" class="px-gutter-sm py-1 rounded-full bg-break-container text-on-break-container border border-accent-break/40 text-label-sm">6 Hari Sehat</span>
+              </div>
+
+              <!-- Lencana Istirahat Disiplin -->
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-gutter-sm">
+                <div class="p-gutter-md rounded-md bg-bg-elevated/50 border border-accent-teal/30 flex items-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-accent-teal">visibility</span>
+                  <div>
+                    <p data-design-text-token="label-lg" class="text-label-lg text-text-primary">Penjaga Mata</p>
+                    <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">10x jeda 20-20-20</p>
+                  </div>
+                </div>
+                <div class="p-gutter-md rounded-md bg-bg-elevated/50 border border-accent-break/30 flex items-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-accent-break">water_drop</span>
+                  <div>
+                    <p data-design-text-token="label-lg" class="text-label-lg text-text-primary">Jeda Disiplin</p>
+                    <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">5 hari tanpa lewati jeda</p>
+                  </div>
+                </div>
+                <div class="p-gutter-md rounded-md bg-bg-elevated/50 border border-accent-purple/30 flex items-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-accent-purple">bedtime</span>
+                  <div>
+                    <p data-design-text-token="label-lg" class="text-label-lg text-text-primary">Anti-Lembur</p>
+                    <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Patuh Digital Sunset</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Target Mingguan -->
+              <div class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 flex flex-wrap items-center justify-between gap-gutter-sm">
+                <div>
+                  <p data-design-text-token="body-md" class="text-body-md text-text-primary">Target Mingguan Sehat</p>
+                  <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Hari kerja tanpa melewati batas jam harian</p>
+                </div>
+                <select class="rounded-md bg-bg-primary border border-border-subtle text-text-primary text-label-lg px-gutter-sm py-2">
+                  <option>3 hari / minggu</option>
+                  <option selected>5 hari / minggu</option>
+                  <option>6 hari / minggu</option>
+                </select>
+              </div>
+
+              <!-- Ritual Penutup Hari -->
+              <div class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10 flex flex-col gap-gutter-sm">
+                <div class="flex items-center justify-between">
+                  <span data-design-text-token="body-md" class="text-body-md text-text-primary">Ritual Penutup Hari</span>
+                  <input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus">
+                </div>
+                <label class="flex items-center gap-gutter-sm text-label-lg text-text-secondary cursor-pointer">
+                  <input type="checkbox" checked class="rounded-sm bg-bg-primary border-border-subtle text-accent-break">
+                  <span>Tutup semua tab pekerjaan yang tidak mendesak</span>
+                </label>
+                <label class="flex items-center gap-gutter-sm text-label-lg text-text-secondary cursor-pointer">
+                  <input type="checkbox" checked class="rounded-sm bg-bg-primary border-border-subtle text-accent-break">
+                  <span>Catat 1 hal baik yang selesai hari ini</span>
+                </label>
+              </div>
+
+              <!-- Kartu Ringkasan Mingguan -->
+              <div class="p-gutter-md rounded-lg bg-gradient-to-br from-focus-container to-bg-elevated border border-accent-focus/30 flex flex-wrap items-center justify-between gap-gutter-md">
+                <div>
+                  <p data-design-text-token="label-sm" class="text-label-sm text-accent-teal">Kartu Ringkasan Mingguan</p>
+                  <p data-design-text-token="body-md" class="text-body-md text-text-primary">Fokus Sehat: 18 jam • Kepatuhan Jeda: 92%</p>
+                </div>
+                <button type="button" class="min-h-[44px] px-gutter-md rounded-md bg-gradient-to-r from-accent-focus to-accent-purple text-on-accent-focus font-semibold">
+                  <span data-design-text-token="label-lg" class="text-label-lg">Bagikan Gambar</span>
+                </button>
+              </div>
+            </article>
+          </section>
+
+          <!-- PANEL 10: DATA & PRIVASI -->
+          <section id="panel-data" role="tabpanel" class="settings-panel hidden flex flex-col gap-gutter-lg">
+            <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-lg shadow-lg">
+              <div>
+                <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Data &amp; Privasi</h2>
+                <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Kontrol penuh atas data kebiasaan fokus Anda.</p>
+              </div>
+
+              <div class="p-gutter-md rounded-md bg-break-container/50 border border-accent-break/30 flex items-center gap-gutter-sm">
+                <span class="material-symbols-outlined text-accent-break">smartphone</span>
+                <p data-design-text-token="label-lg" class="text-label-lg text-on-break-container">Data hanya tersimpan di perangkat ini. Tidak ada server eksternal yang membaca riwayat Anda.</p>
+              </div>
+
+              <!-- Mode Demo Presentasi -->
+              <div class="p-gutter-md rounded-md bg-focus-container/50 border border-accent-focus/40 flex flex-wrap items-center justify-between gap-gutter-md">
+                <div>
+                  <div class="flex items-center gap-gutter-xs">
+                    <span class="material-symbols-outlined text-accent-focus text-[20px]">science</span>
+                    <p data-design-text-token="body-md" class="font-semibold text-body-md text-text-primary">Mode Demo (Presentasi Juri)</p>
+                  </div>
+                  <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Isi otomatis data contoh 14 hari agar grafik Insights langsung penuh saat demo.</p>
+                </div>
+                <button type="button" class="min-h-[44px] px-gutter-md rounded-md bg-gradient-to-r from-accent-focus to-accent-purple text-on-accent-focus font-semibold">
+                  <span data-design-text-token="label-lg" class="text-label-lg">Aktifkan Mode Demo</span>
+                </button>
+              </div>
+
+              <!-- Export / Import -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter-md">
+                <button type="button" class="min-h-[44px] px-gutter-md py-3 rounded-md bg-bg-elevated/70 border border-text-primary/10 text-text-primary hover:bg-bg-elevated flex items-center justify-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-[20px]">download</span>
+                  <span data-design-text-token="label-lg" class="text-label-lg">Ekspor Data (.json)</span>
+                </button>
+                <button type="button" class="min-h-[44px] px-gutter-md py-3 rounded-md bg-bg-elevated/70 border border-text-primary/10 text-text-primary hover:bg-bg-elevated flex items-center justify-center gap-gutter-sm">
+                  <span class="material-symbols-outlined text-[20px]">upload</span>
+                  <span data-design-text-token="label-lg" class="text-label-lg">Impor Data (.json)</span>
+                </button>
+              </div>
+
+              <!-- Reset Onboarding & Hapus Semua Data -->
+              <div class="pt-gutter-md border-t border-text-primary/10 flex flex-wrap items-center justify-between gap-gutter-sm">
+                <button type="button" class="min-h-[44px] px-gutter-md rounded-md bg-bg-elevated/70 border border-text-primary/10 text-text-primary hover:bg-bg-elevated">
+                  <span data-design-text-token="label-lg" class="text-label-lg">Reset Onboarding</span>
+                </button>
+                <button type="button" onclick="openModal(&#39;modal-delete&#39;)" class="min-h-[44px] px-gutter-md rounded-md bg-danger-container/80 border border-accent-danger/40 text-on-danger-container hover:opacity-90">
+                  <span data-design-text-token="label-lg" class="text-label-lg">Hapus Semua Data</span>
+                </button>
+              </div>
+            </article>
+          </section>
+
+          <!-- PANEL 11: BANTUAN & TENTANG -->
+          <section id="panel-bantuan" role="tabpanel" class="settings-panel hidden flex flex-col gap-gutter-lg">
+            <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-lg shadow-lg">
+              <div class="flex flex-wrap items-center justify-between gap-gutter-sm">
+                <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Bantuan &amp; Tentang FlowGuard</h2>
+                <span data-design-text-token="label-sm" class="font-display text-label-sm text-text-secondary">v1.0.0-mvp</span>
+              </div>
+
+              <!-- Disclaimer -->
+              <div class="p-gutter-md rounded-md bg-warning-container/40 border border-accent-warning/30 flex items-start gap-gutter-sm">
+                <span class="material-symbols-outlined text-accent-warning">info</span>
+                <div>
+                  <p data-design-text-token="label-lg" class="text-label-lg text-text-primary">Alat kebiasaan sehat, bukan alat diagnosis medis.</p>
+                  <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Jika Anda merasa kelelahan berat atau tertekan berkepanjangan, hubungi tenaga profesional atau layanan konseling Sejiwa (119 ext. 8).</p>
+                </div>
+              </div>
+
+              <!-- FAQ Accordion -->
+              <div class="flex flex-col gap-gutter-sm">
+                <details class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10" open>
+                  <summary data-design-text-token="body-md" class="font-semibold text-body-md text-text-primary cursor-pointer">Bagaimana cara kerja Sesi Adaptif?</summary>
+                  <p data-design-text-token="label-lg" class="mt-gutter-sm text-label-lg text-text-secondary">Sebelum sesi dimulai, FlowGuard menanyakan tingkat energi Anda dan menyesuaikan durasi fokus secara otomatis agar tidak memaksakan diri saat lelah.</p>
+                </details>
+                <details class="p-gutter-md rounded-md bg-bg-elevated/50 border border-text-primary/10">
+                  <summary data-design-text-token="body-md" class="font-semibold text-body-md text-text-primary">Apa bedanya Soft Stop dan Hard Stop?</summary>
+                  <p data-design-text-token="label-lg" class="mt-gutter-sm text-label-lg text-text-secondary">Soft Stop hanya memberi pengingat lembut saat batas harian tercapai, sedangkan Hard Stop mengunci sesi baru kecuali Anda mengisi alasan di Override Darurat.</p>
+                </details>
+              </div>
+
+              <!-- Kredit & Lisensi -->
+              <div class="p-gutter-md rounded-md bg-bg-primary/50 border border-text-primary/10 flex flex-col gap-gutter-xs">
+                <p data-design-text-token="label-lg" class="text-label-lg text-text-primary">Kredit &amp; Lisensi Terbuka</p>
+                <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Chart.js (MIT) • MediaPipe Pose (Apache 2.0) • Material Symbols (Apache 2.0) • Ambient Audio (CC0 Public Domain).</p>
+              </div>
+            </article>
+          </section>
+
+        </div>
+      </main>
+
+      <!-- Mobile Bottom Tab Bar -->
+      <nav aria-label="Navigasi mobile" class="lg:hidden fixed bottom-0 inset-x-0 z-20 bg-bg-surface/90 backdrop-blur-xl border-t border-text-primary/10 grid grid-cols-4 h-14">
+        <a href="../workspace-idle/WorkspaceIdle.html" class="flex flex-col items-center justify-center gap-0.5 text-text-secondary"><span class="material-symbols-outlined">home</span><span data-design-text-token="caption-xs" class="text-caption-xs">Home</span></a>
+        <a href="../insights-dashboard/InsightsDashboard.html" class="flex flex-col items-center justify-center gap-0.5 text-text-secondary"><span class="material-symbols-outlined">bar_chart</span><span data-design-text-token="caption-xs" class="text-caption-xs">Insights</span></a>
+        <a href="../break-library/BreakLibrary.html" class="flex flex-col items-center justify-center gap-0.5 text-text-secondary"><span class="material-symbols-outlined">menu_book</span><span data-design-text-token="caption-xs" class="text-caption-xs">Istirahat</span></a>
+        <a href="#" aria-current="page" class="flex flex-col items-center justify-center gap-0.5 text-accent-focus"><span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">settings</span><span data-design-text-token="caption-xs" class="text-caption-xs">Pengaturan</span></a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- MODAL 1: Override Darurat -->
+  <div id="modal-override" class="hidden fixed inset-0 z-50 bg-bg-primary/80 backdrop-blur-lg flex items-center justify-center p-gutter-md">
+    <div class="w-full max-w-md bg-bg-surface border border-accent-warning/40 rounded-xl p-gutter-lg flex flex-col gap-gutter-md shadow-2xl">
+      <div class="flex items-center justify-between">
+        <h3 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Override Darurat</h3>
+        <button type="button" onclick="closeModal(&#39;modal-override&#39;)" class="text-text-secondary hover:text-text-primary"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Tuliskan alasan Anda membuka kunci Hard Stop. Alasan ini akan dicatat di laporan Insights.</p>
+      <textarea rows="3" placeholder="Contoh: Harus mengirim tugas akhir sebelum pukul 23:59..." class="w-full rounded-md bg-bg-primary border border-border-subtle text-text-primary text-body-md p-gutter-sm"></textarea>
+      <div class="flex justify-end gap-gutter-sm">
+        <button type="button" onclick="closeModal(&#39;modal-override&#39;)" class="min-h-[44px] px-gutter-md rounded-md bg-bg-elevated text-text-primary text-label-lg">Batal</button>
+        <button type="button" onclick="closeModal(&#39;modal-override&#39;)" class="min-h-[44px] px-gutter-md rounded-md bg-warning-container border border-accent-warning/50 text-on-warning-container text-label-lg">Catat &amp; Buka Kunci</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 2: Hapus Semua Data -->
+  <div id="modal-delete" class="hidden fixed inset-0 z-50 bg-bg-primary/80 backdrop-blur-lg flex items-center justify-center p-gutter-md">
+    <div class="w-full max-w-md bg-bg-surface border border-accent-danger/40 rounded-xl p-gutter-lg flex flex-col gap-gutter-md shadow-2xl">
+      <div class="flex items-center justify-between">
+        <h3 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Hapus Semua Data?</h3>
+        <button type="button" onclick="closeModal(&#39;modal-delete&#39;)" class="text-text-secondary hover:text-text-primary"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Seluruh riwayat sesi, skor energi, lencana, dan pengaturan lokal akan dihapus permanen.</p>
+      <div class="flex justify-end gap-gutter-sm">
+        <button type="button" onclick="closeModal(&#39;modal-delete&#39;)" class="min-h-[44px] px-gutter-md rounded-md bg-bg-elevated text-text-primary text-label-lg">Batal</button>
+        <button type="button" onclick="closeModal(&#39;modal-delete&#39;)" class="min-h-[44px] px-gutter-md rounded-md bg-danger-container border border-accent-danger/50 text-on-danger-container text-label-lg">Ya, Hapus Permanen</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL 3: Tambah Preset Soundscape -->
+  <div id="modal-preset" class="hidden fixed inset-0 z-50 bg-bg-primary/80 backdrop-blur-lg flex items-center justify-center p-gutter-md">
+    <div class="w-full max-w-md bg-bg-surface border border-text-primary/15 rounded-xl p-gutter-lg flex flex-col gap-gutter-md shadow-2xl">
+      <div class="flex items-center justify-between">
+        <h3 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Tambah Preset Baru</h3>
+        <button type="button" onclick="closeModal(&#39;modal-preset&#39;)" class="text-text-secondary hover:text-text-primary"><span class="material-symbols-outlined">close</span></button>
+      </div>
+      <input type="text" placeholder="Nama preset (mis. Baca Jurnal Pagi)" class="w-full rounded-md bg-bg-primary border border-border-subtle text-text-primary text-body-md px-gutter-sm py-2">
+      <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">Komposisi volume mixer saat ini akan disimpan sebagai preset baru.</p>
+      <div class="flex justify-end gap-gutter-sm">
+        <button type="button" onclick="closeModal(&#39;modal-preset&#39;)" class="min-h-[44px] px-gutter-md rounded-md bg-bg-elevated text-text-primary text-label-lg">Batal</button>
+        <button type="button" onclick="closeModal(&#39;modal-preset&#39;)" class="min-h-[44px] px-gutter-md rounded-md bg-gradient-to-r from-accent-focus to-accent-purple text-on-accent-focus font-semibold text-label-lg">Simpan Preset</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchSettingsTab(tabId) {
+      document.querySelectorAll('.settings-panel').forEach(function(panel) {
+        panel.classList.add('hidden');
+      });
+      var target = document.getElementById('panel-' + tabId);
+      if (target) target.classList.remove('hidden');
+
+      document.querySelectorAll('.settings-tab-btn').forEach(function(btn) {
+        var isActive = btn.getAttribute('data-tab') === tabId;
+        btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+        if (isActive) {
+          btn.classList.remove('text-text-secondary', 'hover:bg-bg-elevated/60', 'hover:text-text-primary', 'border-transparent');
+          btn.classList.add('bg-focus-container', 'text-on-focus-container', 'border-accent-focus/40');
+        } else {
+          btn.classList.remove('bg-focus-container', 'text-on-focus-container', 'border-accent-focus/40');
+          btn.classList.add('text-text-secondary', 'hover:bg-bg-elevated/60', 'hover:text-text-primary', 'border-transparent');
+        }
+      });
+    }
+
+    function openModal(id) {
+      var el = document.getElementById(id);
+      if (el) el.classList.remove('hidden');
+    }
+
+    function closeModal(id) {
+      var el = document.getElementById(id);
+      if (el) el.classList.add('hidden');
+    }
+  </script>
+
+
+</body></html>

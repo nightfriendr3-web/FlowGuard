@@ -1,0 +1,272 @@
+<!DOCTYPE html><html lang="id" class="dark"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../aset/favicon.png">
+<link rel="apple-touch-icon" href="../aset/app-icon-192.png">
+<link rel="stylesheet" href="../aset/flowguard.css">
+<script defer src="../aset/flowguard.js"></script>
+
+  <meta charset="UTF-8">
+  <title>Pengaturan: Tampilan — FlowGuard</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config" data-stitch-original-src="0e026e4ec56befb6===../../tailwind.config.js">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'bg-primary': '#0D1321',
+        'bg-navy-end': '#1B2838',
+        'bg-surface': '#141C2E',
+        'bg-elevated': '#1C263B',
+        'border-subtle': '#29354D',
+        'text-primary': '#E8E6E3',
+        'text-secondary': '#9CA3AF',
+        'primary': '#6C8EEF',
+        'on-primary': '#00174A',
+        'accent-focus': '#6C8EEF',
+        'on-accent-focus': '#00174A',
+        'accent-indigo': '#818CF8',
+        'accent-purple': '#A78BFA',
+        'on-accent-purple': '#1E0A4B',
+        'accent-teal': '#5EEAD4',
+        'on-accent-teal': '#00201C',
+        'accent-break': '#81C995',
+        'on-accent-break': '#00210E',
+        'accent-warning': '#F4A261',
+        'on-accent-warning': '#2F1400',
+        'accent-danger': '#E07A6E',
+        'on-accent-danger': '#400202',
+        'energy-1': '#E07A6E',
+        'energy-2': '#F4A261',
+        'energy-3': '#FBBF24',
+        'energy-4': '#81C995',
+        'energy-5': '#34D399',
+        'focus-container': '#182442',
+        'on-focus-container': '#DBE1FF',
+        'break-container': '#122B24',
+        'on-break-container': '#A9F3BC',
+        'warning-container': '#332011',
+        'on-warning-container': '#FFDCC4',
+        'danger-container': '#361816',
+        'on-danger-container': '#FFDAD5',
+        'sepia-bg': '#F5F0E8',
+        'sepia-text': '#3D3929',
+        'forest-bg': '#1B2A1F',
+        'forest-accent': '#7BC8A4',
+      },
+      borderRadius: {
+        'sm': '6px',
+        'DEFAULT': '10px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"JetBrains Mono"', 'sans-serif'],
+        'headline': ['"Inter"', 'sans-serif'],
+        'body': ['"Inter"', 'sans-serif'],
+        'label': ['"Inter"', 'sans-serif'],
+        'caption': ['"Inter"', 'sans-serif'],
+      },
+      fontSize: {
+        'display-timer': ['72px', { lineHeight: '80px', letterSpacing: '-1.5px', fontWeight: '700' }],
+        'display-timer-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg': ['30px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-md': ['22px', { lineHeight: '30px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '500' }],
+        'caption-xs': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '400' }],
+      },
+      transitionDuration: {
+        'state-change': '300ms',
+        'surface-enter': '400ms',
+        'surface-exit': '300ms',
+        'flow-transition': '500ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+        'flow-transition': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+        'flow-transition': 'ease-in-out',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }
+    .bg-flow-mesh {
+      background-color: #0D1321;
+      background-image:
+        radial-gradient(ellipse 80% 50% at 20% 10%, rgba(108, 142, 239, 0.14), transparent 60%),
+        radial-gradient(ellipse 60% 50% at 85% 25%, rgba(94, 234, 212, 0.08), transparent 55%),
+        radial-gradient(ellipse 70% 60% at 50% 95%, rgba(167, 139, 250, 0.10), transparent 60%),
+        linear-gradient(160deg, #0D1321 0%, #1B2838 100%);
+    }
+    .bg-grid-pattern {
+      background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.03) 0px, rgba(255, 255, 255, 0.03) 1px, transparent 1px, transparent 28px);
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+  </style>
+</head>
+<body class="bg-flow-mesh text-text-primary font-body antialiased">
+  <div class="min-h-[1024px] bg-grid-pattern flex flex-col lg:flex-row" data-stitch-vh="min-h-[1024px]===min-h-screen">
+    <aside class="hidden lg:flex flex-col items-center justify-between min-h-[1024px] w-[72px] bg-bg-surface/60 backdrop-blur-xl border-r border-text-primary/10 py-gutter-lg px-gutter-xs sticky top-0 z-30 shrink-0" data-stitch-vh="min-h-[1024px]===min-h-screen">
+      <div class="flex flex-col items-center gap-gutter-xl w-full">
+        <a href="../workspace-idle/WorkspaceIdle.html" aria-label="FlowGuard Home" class="w-11 h-11 rounded-md bg-focus-container/70 border border-accent-focus/30 flex items-center justify-center text-accent-focus shadow-lg shadow-accent-focus/15"><span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">shield</span></a>
+        <nav aria-label="Navigasi utama" class="flex flex-col items-center gap-gutter-sm w-full">
+          <a href="../workspace-idle/WorkspaceIdle.html" class="w-14 py-gutter-xs rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary flex flex-col items-center justify-center gap-0.5"><span class="material-symbols-outlined">home</span><span data-design-text-token="caption-xs" class="text-caption-xs">Home</span></a>
+          <a href="../insights-dashboard/InsightsDashboard.html" class="w-14 py-gutter-xs rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary flex flex-col items-center justify-center gap-0.5"><span class="material-symbols-outlined">bar_chart</span><span data-design-text-token="caption-xs" class="text-caption-xs">Insights</span></a>
+          <a href="../break-library/BreakLibrary.html" class="w-14 py-gutter-xs rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary flex flex-col items-center justify-center gap-0.5"><span class="material-symbols-outlined">menu_book</span><span data-design-text-token="caption-xs" class="text-caption-xs">Istirahat</span></a>
+          <a href="../settings-guardrails/SettingsGuardrails.html" aria-current="page" class="w-14 py-gutter-xs rounded-md bg-focus-container text-on-focus-container border border-accent-focus/40 shadow-md shadow-accent-focus/15 flex flex-col items-center justify-center gap-0.5"><span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">settings</span><span data-design-text-token="caption-xs" class="text-caption-xs">Pengaturan</span></a>
+        </nav>
+      </div>
+      <a href="../settings-profil-persona/SettingsProfilPersona.html" aria-label="Profil Andi Pratama" class="w-10 h-10 rounded-full bg-gradient-to-br from-accent-focus to-accent-purple text-on-accent-focus font-semibold flex items-center justify-center border border-text-primary/20"><span data-design-text-token="label-sm" class="text-label-sm">AP</span></a>
+    </aside>
+
+    <div class="flex-1 flex flex-col min-w-0">
+      <header class="sticky top-0 z-20 bg-bg-surface/40 backdrop-blur-xl border-b border-text-primary/10 px-gutter-md lg:px-gutter-xl py-gutter-md flex flex-wrap items-center justify-between gap-gutter-sm">
+        <div>
+          <h1 data-design-text-token="headline-lg" class="font-headline text-headline-lg text-text-primary">Tampilan</h1>
+          <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Sesuaikan tema warna, filter cahaya biru, dan aksesibilitas agar mata tetap nyaman.</p>
+        </div>
+        <span data-design-text-token="label-sm" class="px-gutter-sm py-1 rounded-full bg-focus-container text-on-focus-container text-label-sm">Ramah Mata</span>
+      </header>
+
+      <main class="flex-1 max-w-6xl w-full mx-auto px-gutter-md lg:px-gutter-xl pt-gutter-lg pb-24 lg:pb-gutter-lg flex flex-col lg:flex-row gap-gutter-lg items-start">
+        <aside aria-label="Sub-navigasi Pengaturan" class="w-full lg:w-64 shrink-0 lg:sticky lg:top-24">
+          <div class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-sm shadow-lg">
+            <nav class="flex lg:flex-col gap-1 overflow-x-auto no-scrollbar">
+              <a href="../settings-guardrails/SettingsGuardrails.html" class="shrink-0 flex items-center gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent"><span class="material-symbols-outlined text-[20px]">shield</span><span data-design-text-token="label-lg" class="text-label-lg">Guardrails</span></a>
+              <a href="../settings-sesi-adaptif/SettingsSesiAdaptif.html" class="shrink-0 flex items-center gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent"><span class="material-symbols-outlined text-[20px]">tune</span><span data-design-text-token="label-lg" class="text-label-lg">Sesi Adaptif</span></a>
+              <a href="../settings-mode-konteks/SettingsModeKonteks.html" class="shrink-0 flex items-center gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent"><span class="material-symbols-outlined text-[20px]">auto_awesome</span><span data-design-text-token="label-lg" class="text-label-lg">Mode Konteks</span></a>
+              <a href="../settings-profil-persona/SettingsProfilPersona.html" class="shrink-0 flex items-center gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent"><span class="material-symbols-outlined text-[20px]">person</span><span data-design-text-token="label-lg" class="text-label-lg">Profil &amp; Persona</span></a>
+              <a href="#" aria-current="page" class="shrink-0 flex items-center gap-gutter-sm px-gutter-sm py-2.5 rounded-md bg-focus-container text-on-focus-container border border-accent-focus/40"><span class="material-symbols-outlined text-[20px]">palette</span><span data-design-text-token="label-lg" class="text-label-lg">Tampilan</span></a>
+              <a href="../settings-notifikasi/SettingsNotifikasi.html" class="shrink-0 flex items-center gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent"><span class="material-symbols-outlined text-[20px]">notifications</span><span data-design-text-token="label-lg" class="text-label-lg">Notifikasi</span></a>
+              <a href="../settings-soundscape/SettingsSoundscape.html" class="shrink-0 flex items-center gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent"><span class="material-symbols-outlined text-[20px]">graphic_eq</span><span data-design-text-token="label-lg" class="text-label-lg">Soundscape</span></a>
+              <a href="../settings-posture-check/SettingsPostureCheck.html" class="shrink-0 flex items-center gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent"><span class="material-symbols-outlined text-[20px]">accessibility_new</span><span data-design-text-token="label-lg" class="text-label-lg">Posture Check</span></a>
+              <a href="../settings-motivasi/SettingsMotivasi.html" class="shrink-0 flex items-center gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent"><span class="material-symbols-outlined text-[20px]">emoji_events</span><span data-design-text-token="label-lg" class="text-label-lg">Motivasi</span></a>
+              <a href="../settings-data-privasi/SettingsDataPrivasi.html" class="shrink-0 flex items-center gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent"><span class="material-symbols-outlined text-[20px]">database</span><span data-design-text-token="label-lg" class="text-label-lg">Data &amp; Privasi</span></a>
+              <a href="../settings-bantuan/SettingsBantuan.html" class="shrink-0 flex items-center gap-gutter-sm px-gutter-sm py-2.5 rounded-md text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary border border-transparent"><span class="material-symbols-outlined text-[20px]">help</span><span data-design-text-token="label-lg" class="text-label-lg">Bantuan</span></a>
+            </nav>
+          </div>
+        </aside>
+
+        <!-- Controls + Live Preview Grid -->
+        <div class="flex-1 min-w-0 w-full grid grid-cols-1 xl:grid-cols-3 gap-gutter-lg items-start">
+          <div class="xl:col-span-2 flex flex-col gap-gutter-lg">
+            <!-- 1. 5 Theme Cards with Mini Preview -->
+            <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-md shadow-lg">
+              <div>
+                <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Tema Warna</h2>
+                <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Pilih suasana visual atau biarkan berubah otomatis mengikuti jam.</p>
+              </div>
+              <div class="grid grid-cols-2 sm:grid-cols-5 gap-gutter-sm">
+                <button type="button" aria-pressed="true" class="p-gutter-sm rounded-md bg-bg-primary border border-accent-focus text-left flex flex-col gap-gutter-xs">
+                  <div class="h-10 rounded-sm bg-bg-elevated border border-text-primary/10 p-1.5 flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-accent-focus"></span><span class="h-1.5 w-8 rounded-full bg-text-primary/40"></span></div>
+                  <span data-design-text-token="label-sm" class="text-label-sm text-text-primary">Dark</span>
+                </button>
+                <button type="button" class="p-gutter-sm rounded-md bg-bg-elevated/50 border border-border-subtle text-left flex flex-col gap-gutter-xs">
+                  <div class="h-10 rounded-sm bg-text-primary p-1.5 flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-accent-focus"></span><span class="h-1.5 w-8 rounded-full bg-bg-primary/40"></span></div>
+                  <span data-design-text-token="label-sm" class="text-label-sm text-text-primary">Terang</span>
+                </button>
+                <button type="button" class="p-gutter-sm rounded-md bg-sepia-bg border border-border-subtle text-left flex flex-col gap-gutter-xs">
+                  <div class="h-10 rounded-sm bg-sepia-bg border border-sepia-text/20 p-1.5 flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-accent-warning"></span><span class="h-1.5 w-8 rounded-full bg-sepia-text/40"></span></div>
+                  <span data-design-text-token="label-sm" class="text-label-sm text-sepia-text">Sepia</span>
+                </button>
+                <button type="button" class="p-gutter-sm rounded-md bg-forest-bg border border-border-subtle text-left flex flex-col gap-gutter-xs">
+                  <div class="h-10 rounded-sm bg-forest-bg border border-forest-accent/30 p-1.5 flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-forest-accent"></span><span class="h-1.5 w-8 rounded-full bg-forest-accent/40"></span></div>
+                  <span data-design-text-token="label-sm" class="text-label-sm text-forest-accent">Forest</span>
+                </button>
+                <button type="button" class="p-gutter-sm rounded-md bg-bg-elevated/50 border border-border-subtle text-left flex flex-col gap-gutter-xs">
+                  <div class="h-10 rounded-sm bg-gradient-to-r from-bg-primary to-sepia-bg p-1.5 flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-accent-teal"></span></div>
+                  <span data-design-text-token="label-sm" class="text-label-sm text-text-primary">Otomatis</span>
+                </button>
+              </div>
+            </article>
+
+            <!-- 2. Filter Cahaya Biru -->
+            <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-md shadow-lg">
+              <div class="flex items-center justify-between gap-gutter-sm">
+                <div>
+                  <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Filter Cahaya Biru</h2>
+                  <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Mengurangi emisi cahaya biru layar pada malam hari.</p>
+                </div>
+                <input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus">
+              </div>
+              <label class="flex flex-col gap-gutter-xs">
+                <div class="flex justify-between"><span data-design-text-token="label-lg" class="text-label-lg text-text-primary">Intensitas kehangatan</span><span class="font-display text-label-lg text-accent-warning">35%</span></div>
+                <input type="range" min="0" max="80" value="35" class="w-full h-2 rounded-full bg-bg-primary accent-accent-warning">
+              </label>
+              <div class="grid grid-cols-2 gap-gutter-md">
+                <label class="flex flex-col gap-gutter-xs"><span data-design-text-token="label-sm" class="text-label-sm text-text-secondary">Mulai</span><input type="time" value="20:00" class="rounded-md bg-bg-primary border border-border-subtle text-text-primary px-gutter-sm py-1.5"></label>
+                <label class="flex flex-col gap-gutter-xs"><span data-design-text-token="label-sm" class="text-label-sm text-text-secondary">Selesai</span><input type="time" value="06:00" class="rounded-md bg-bg-primary border border-border-subtle text-text-primary px-gutter-sm py-1.5"></label>
+              </div>
+            </article>
+
+            <!-- 3. Aksesibilitas & 4. Flow Mode Otomatis -->
+            <article class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg flex flex-col gap-gutter-md shadow-lg">
+              <div>
+                <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Aksesibilitas &amp; Flow Mode</h2>
+                <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Atur keterbacaan teks, animasi, dan perilaku menu saat fokus.</p>
+              </div>
+              <label class="flex flex-col gap-gutter-xs">
+                <div class="flex justify-between"><span data-design-text-token="body-md" class="text-body-md text-text-primary">Ukuran font</span><span class="font-display text-label-lg text-accent-focus">16px</span></div>
+                <input type="range" min="14" max="20" value="16" class="w-full h-2 rounded-full bg-bg-primary accent-accent-focus">
+              </label>
+              <label class="flex items-center justify-between min-h-[44px] cursor-pointer"><span data-design-text-token="body-md" class="text-body-md text-text-primary">Kontras tinggi</span><input type="checkbox" class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus"></label>
+              <label class="flex items-center justify-between min-h-[44px] cursor-pointer"><span data-design-text-token="body-md" class="text-body-md text-text-primary">Kurangi animasi</span><input type="checkbox" class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus"></label>
+              <label class="flex items-center justify-between min-h-[44px] cursor-pointer"><span data-design-text-token="body-md" class="text-body-md text-text-primary">Font ramah disleksia</span><input type="checkbox" class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus"></label>
+              <label class="flex items-center justify-between min-h-[44px] pt-gutter-sm border-t border-text-primary/10 cursor-pointer"><span data-design-text-token="body-md" class="text-body-md text-text-primary">Flow Mode otomatis saat fokus (menyembunyikan menu)</span><input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary border-border-subtle text-accent-focus"></label>
+            </article>
+          </div>
+
+          <!-- 5. Panel Pratinjau Langsung -->
+          <aside class="bg-bg-surface/60 backdrop-blur-xl border border-accent-focus/30 rounded-lg p-gutter-lg flex flex-col gap-gutter-md shadow-lg xl:sticky xl:top-24">
+            <span data-design-text-token="label-sm" class="text-label-sm text-accent-teal">Pratinjau Langsung</span>
+            <div class="rounded-lg bg-bg-primary border border-text-primary/10 p-gutter-md flex flex-col gap-gutter-sm">
+              <div class="flex items-center justify-between">
+                <span data-design-text-token="label-sm" class="text-label-sm text-accent-focus">Sesi Fokus</span>
+                <span class="font-display text-label-sm text-text-secondary">25:00</span>
+              </div>
+              <p data-design-text-token="body-md" class="text-body-md text-text-primary">Contoh kartu tampilan sesuai tema, ukuran font, dan filter cahaya biru Anda.</p>
+              <button type="button" class="min-h-[44px] w-full rounded-md bg-gradient-to-r from-accent-focus to-accent-purple text-on-accent-focus text-label-lg">Mulai Sesi</button>
+            </div>
+          </aside>
+        </div>
+      </main>
+
+      <nav aria-label="Navigasi mobile" class="lg:hidden fixed bottom-0 inset-x-0 z-20 bg-bg-surface/90 backdrop-blur-xl border-t border-text-primary/10 grid grid-cols-4 h-14">
+        <a href="../workspace-idle/WorkspaceIdle.html" class="flex flex-col items-center justify-center gap-0.5 text-text-secondary"><span class="material-symbols-outlined">home</span><span data-design-text-token="caption-xs" class="text-caption-xs">Home</span></a>
+        <a href="../insights-dashboard/InsightsDashboard.html" class="flex flex-col items-center justify-center gap-0.5 text-text-secondary"><span class="material-symbols-outlined">bar_chart</span><span data-design-text-token="caption-xs" class="text-caption-xs">Insights</span></a>
+        <a href="../break-library/BreakLibrary.html" class="flex flex-col items-center justify-center gap-0.5 text-text-secondary"><span class="material-symbols-outlined">menu_book</span><span data-design-text-token="caption-xs" class="text-caption-xs">Istirahat</span></a>
+        <a href="../settings-guardrails/SettingsGuardrails.html" aria-current="page" class="flex flex-col items-center justify-center gap-0.5 text-accent-focus"><span class="material-symbols-outlined" style="font-variation-settings: &#39;FILL&#39; 1;">settings</span><span data-design-text-token="caption-xs" class="text-caption-xs">Pengaturan</span></a>
+      </nav>
+    </div>
+  </div>
+
+
+</body></html>

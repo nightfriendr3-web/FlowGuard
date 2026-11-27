@@ -1,0 +1,204 @@
+<!DOCTYPE html><html lang="id" class="dark"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../aset/favicon.png">
+<link rel="apple-touch-icon" href="../aset/app-icon-192.png">
+<link rel="stylesheet" href="../aset/flowguard.css">
+<script defer src="../aset/flowguard.js"></script>
+
+  <meta charset="UTF-8">
+  <title>Edit Profil — FlowGuard</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config" data-stitch-original-src="0e026e4ec56befb6===../../tailwind.config.js">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'bg-primary': '#0D1321',
+        'bg-navy-end': '#1B2838',
+        'bg-surface': '#141C2E',
+        'bg-elevated': '#1C263B',
+        'border-subtle': '#29354D',
+        'text-primary': '#E8E6E3',
+        'text-secondary': '#9CA3AF',
+        'primary': '#6C8EEF',
+        'on-primary': '#00174A',
+        'accent-focus': '#6C8EEF',
+        'on-accent-focus': '#00174A',
+        'accent-indigo': '#818CF8',
+        'accent-purple': '#A78BFA',
+        'on-accent-purple': '#1E0A4B',
+        'accent-teal': '#5EEAD4',
+        'on-accent-teal': '#00201C',
+        'accent-break': '#81C995',
+        'on-accent-break': '#00210E',
+        'accent-warning': '#F4A261',
+        'on-accent-warning': '#2F1400',
+        'accent-danger': '#E07A6E',
+        'on-accent-danger': '#400202',
+        'energy-1': '#E07A6E',
+        'energy-2': '#F4A261',
+        'energy-3': '#FBBF24',
+        'energy-4': '#81C995',
+        'energy-5': '#34D399',
+        'focus-container': '#182442',
+        'on-focus-container': '#DBE1FF',
+        'break-container': '#122B24',
+        'on-break-container': '#A9F3BC',
+        'warning-container': '#332011',
+        'on-warning-container': '#FFDCC4',
+        'danger-container': '#361816',
+        'on-danger-container': '#FFDAD5',
+        'sepia-bg': '#F5F0E8',
+        'sepia-text': '#3D3929',
+        'forest-bg': '#1B2A1F',
+        'forest-accent': '#7BC8A4',
+      },
+      borderRadius: {
+        'sm': '6px',
+        'DEFAULT': '10px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"JetBrains Mono"', 'sans-serif'],
+        'headline': ['"Inter"', 'sans-serif'],
+        'body': ['"Inter"', 'sans-serif'],
+        'label': ['"Inter"', 'sans-serif'],
+        'caption': ['"Inter"', 'sans-serif'],
+      },
+      fontSize: {
+        'display-timer': ['72px', { lineHeight: '80px', letterSpacing: '-1.5px', fontWeight: '700' }],
+        'display-timer-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg': ['30px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-md': ['22px', { lineHeight: '30px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '500' }],
+        'caption-xs': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '400' }],
+      },
+      transitionDuration: {
+        'state-change': '300ms',
+        'surface-enter': '400ms',
+        'surface-exit': '300ms',
+        'flow-transition': '500ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+        'flow-transition': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+        'flow-transition': 'ease-in-out',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }
+    .bg-modal-mesh {
+      background-color: #141C2E;
+      background-image:
+        radial-gradient(circle at 10% 10%, rgba(167, 139, 250, 0.14), transparent 45%),
+        radial-gradient(circle at 90% 90%, rgba(108, 142, 239, 0.14), transparent 45%);
+    }
+  </style>
+</head>
+<body class="bg-bg-primary text-text-primary font-body antialiased">
+  <div class="min-h-[1024px] relative flex items-center justify-center p-gutter-md lg:p-gutter-xl" data-stitch-vh="min-h-[1024px]===min-h-screen">
+    <div aria-hidden="true" class="fixed inset-0 bg-bg-primary/75 backdrop-blur-lg z-0"></div>
+
+    <!-- Edit Profil Modal with Soft Gradient Mesh -->
+    <div role="dialog" aria-modal="true" aria-labelledby="edit-profile-title" class="relative z-10 w-full max-w-[500px] bg-modal-mesh backdrop-blur-2xl border border-text-primary/15 rounded-xl p-gutter-lg lg:p-gutter-xl flex flex-col gap-gutter-lg shadow-2xl">
+      <header class="flex items-center justify-between">
+        <div class="flex items-center gap-gutter-sm">
+          <span class="material-symbols-outlined text-accent-purple">edit</span>
+          <h1 id="edit-profile-title" data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Edit Profil</h1>
+        </div>
+        <button type="button" aria-label="Tutup" class="inline-flex items-center justify-center w-11 h-11 rounded-md bg-bg-elevated/60 text-text-secondary border border-text-primary/10 hover:text-text-primary">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </header>
+
+      <!-- Avatar Picker -->
+      <div class="flex flex-col items-center gap-gutter-sm">
+        <div class="relative w-24 h-24 rounded-full bg-gradient-to-br from-accent-focus to-accent-purple flex items-center justify-center text-on-accent-focus font-headline text-headline-lg border-2 border-text-primary/20 shadow-lg">
+          AP
+          <button type="button" aria-label="Ganti Foto" class="absolute -bottom-1 -right-1 w-9 h-9 rounded-full bg-bg-elevated border border-text-primary/20 text-text-primary flex items-center justify-center hover:bg-bg-surface">
+            <span class="material-symbols-outlined text-label-lg">photo_camera</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Profile Form -->
+      <form class="flex flex-col gap-gutter-md">
+        <label class="flex flex-col gap-gutter-xs">
+          <span data-design-text-token="label-lg" class="text-label-lg text-text-primary">Nama Lengkap</span>
+          <input type="text" value="Andi Pratama" class="w-full min-h-[44px] rounded-md bg-bg-primary/60 border border-border-subtle px-gutter-md text-body-md text-text-primary focus:border-accent-focus focus:ring-0">
+        </label>
+
+        <label class="flex flex-col gap-gutter-xs">
+          <span data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Email</span>
+          <input type="email" value="andi@email.com" readonly class="w-full min-h-[44px] rounded-md bg-bg-primary/30 border border-border-subtle px-gutter-md text-body-md text-text-secondary cursor-not-allowed">
+        </label>
+
+        <label class="flex flex-col gap-gutter-xs">
+          <span data-design-text-token="label-lg" class="text-label-lg text-text-primary">Peran</span>
+          <select class="w-full min-h-[44px] rounded-md bg-bg-primary/60 border border-border-subtle px-gutter-md text-body-md text-text-primary focus:border-accent-focus focus:ring-0">
+            <option selected>Mahasiswa</option>
+            <option>Pekerja Jarak Jauh</option>
+            <option>Freelancer</option>
+          </select>
+        </label>
+
+        <label class="flex flex-col gap-gutter-xs">
+          <span data-design-text-token="label-lg" class="text-label-lg text-text-primary">Bio singkat (opsional)</span>
+          <input type="text" value="Mahasiswa Teknik Informatika" placeholder="Ceritakan sedikit tentang dirimu..." class="w-full min-h-[44px] rounded-md bg-bg-primary/60 border border-border-subtle px-gutter-md text-body-md text-text-primary focus:border-accent-focus focus:ring-0">
+        </label>
+
+        <div class="h-px bg-text-primary/10 my-gutter-xs"></div>
+
+        <div class="flex flex-col gap-gutter-sm">
+          <span data-design-text-token="label-lg" class="text-label-lg text-text-primary">Ubah Password</span>
+          <input type="password" placeholder="Password Lama" aria-label="Password Lama" class="w-full min-h-[44px] rounded-md bg-bg-primary/60 border border-border-subtle px-gutter-md text-body-md text-text-primary placeholder:text-text-secondary focus:border-accent-focus focus:ring-0">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter-sm">
+            <input type="password" placeholder="Password Baru" aria-label="Password Baru" class="w-full min-h-[44px] rounded-md bg-bg-primary/60 border border-border-subtle px-gutter-md text-body-md text-text-primary placeholder:text-text-secondary focus:border-accent-focus focus:ring-0">
+            <input type="password" placeholder="Konfirmasi Baru" aria-label="Konfirmasi Password Baru" class="w-full min-h-[44px] rounded-md bg-bg-primary/60 border border-border-subtle px-gutter-md text-body-md text-text-primary placeholder:text-text-secondary focus:border-accent-focus focus:ring-0">
+          </div>
+        </div>
+      </form>
+
+      <footer class="flex flex-col gap-gutter-sm">
+        <button type="button" class="w-full min-h-[48px] rounded-md bg-gradient-to-r from-accent-focus to-accent-purple text-on-accent-focus shadow-lg shadow-accent-focus/25 hover:opacity-90">
+          <span data-design-text-token="label-lg" class="text-label-lg">Simpan Perubahan</span>
+        </button>
+        <button type="button" class="w-full min-h-[40px] rounded-md text-text-secondary hover:text-text-primary">
+          <span data-design-text-token="label-lg" class="text-label-lg">Batal</span>
+        </button>
+      </footer>
+    </div>
+  </div>
+
+
+</body></html>

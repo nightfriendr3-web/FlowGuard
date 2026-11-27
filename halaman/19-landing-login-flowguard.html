@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="id" class="dark"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../aset/favicon.png">
+<link rel="apple-touch-icon" href="../aset/app-icon-192.png">
+<link rel="stylesheet" href="../aset/flowguard.css">
+<script defer src="../aset/flowguard.js"></script>
+
+  <meta charset="UTF-8">
+  <title>Masuk — FlowGuard</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config" data-stitch-original-src="0e026e4ec56befb6===../../tailwind.config.js">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'bg-primary': '#0D1321',
+        'bg-navy-end': '#1B2838',
+        'bg-surface': '#141C2E',
+        'bg-elevated': '#1C263B',
+        'border-subtle': '#29354D',
+        'text-primary': '#E8E6E3',
+        'text-secondary': '#9CA3AF',
+        'primary': '#6C8EEF',
+        'on-primary': '#00174A',
+        'accent-focus': '#6C8EEF',
+        'on-accent-focus': '#00174A',
+        'accent-indigo': '#818CF8',
+        'accent-purple': '#A78BFA',
+        'on-accent-purple': '#1E0A4B',
+        'accent-teal': '#5EEAD4',
+        'on-accent-teal': '#00201C',
+        'accent-break': '#81C995',
+        'on-accent-break': '#00210E',
+        'accent-warning': '#F4A261',
+        'on-accent-warning': '#2F1400',
+        'accent-danger': '#E07A6E',
+        'on-accent-danger': '#400202',
+        'energy-1': '#E07A6E',
+        'energy-2': '#F4A261',
+        'energy-3': '#FBBF24',
+        'energy-4': '#81C995',
+        'energy-5': '#34D399',
+        'focus-container': '#182442',
+        'on-focus-container': '#DBE1FF',
+        'break-container': '#122B24',
+        'on-break-container': '#A9F3BC',
+        'warning-container': '#332011',
+        'on-warning-container': '#FFDCC4',
+        'danger-container': '#361816',
+        'on-danger-container': '#FFDAD5',
+        'sepia-bg': '#F5F0E8',
+        'sepia-text': '#3D3929',
+        'forest-bg': '#1B2A1F',
+        'forest-accent': '#7BC8A4',
+      },
+      borderRadius: {
+        'sm': '6px',
+        'DEFAULT': '10px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"JetBrains Mono"', 'sans-serif'],
+        'headline': ['"Inter"', 'sans-serif'],
+        'body': ['"Inter"', 'sans-serif'],
+        'label': ['"Inter"', 'sans-serif'],
+        'caption': ['"Inter"', 'sans-serif'],
+      },
+      fontSize: {
+        'display-timer': ['72px', { lineHeight: '80px', letterSpacing: '-1.5px', fontWeight: '700' }],
+        'display-timer-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg': ['30px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-md': ['22px', { lineHeight: '30px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '500' }],
+        'caption-xs': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '400' }],
+      },
+      transitionDuration: {
+        'state-change': '300ms',
+        'surface-enter': '400ms',
+        'surface-exit': '300ms',
+        'flow-transition': '500ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+        'flow-transition': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+        'flow-transition': 'ease-in-out',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }
+    .bg-portal-radial {
+      background-color: #0D1321;
+      background-image:
+        radial-gradient(circle at 50% 35%, rgba(108, 142, 239, 0.28) 0%, rgba(167, 139, 250, 0.14) 28%, rgba(27, 40, 56, 0.45) 55%, #0D1321 85%);
+    }
+  </style>
+</head>
+<body class="bg-portal-radial text-text-primary font-body antialiased">
+  <!-- Sparkle Dots Layer -->
+  <svg aria-hidden="true" class="fixed inset-0 w-full h-full pointer-events-none z-0 opacity-40" viewBox="0 0 1200 900" preserveAspectRatio="xMidYMid slice">
+    <circle cx="180" cy="140" r="1.5" fill="#DBE1FF"></circle><circle cx="320" cy="260" r="1" fill="#5EEAD4"></circle><circle cx="480" cy="110" r="2" fill="#A78BFA"></circle>
+    <circle cx="740" cy="180" r="1.5" fill="#DBE1FF"></circle><circle cx="960" cy="120" r="1" fill="#5EEAD4"></circle><circle cx="1050" cy="290" r="2" fill="#6C8EEF"></circle>
+    <circle cx="140" cy="520" r="1.5" fill="#A78BFA"></circle><circle cx="280" cy="720" r="2" fill="#DBE1FF"></circle><circle cx="910" cy="640" r="1.5" fill="#5EEAD4"></circle>
+    <circle cx="1080" cy="760" r="1" fill="#DBE1FF"></circle><circle cx="620" cy="80" r="1.5" fill="#5EEAD4"></circle><circle cx="410" cy="610" r="1" fill="#A78BFA"></circle>
+  </svg>
+
+  <div class="relative z-10 min-h-[1024px] flex flex-col items-center justify-center p-gutter-md lg:p-gutter-xl gap-gutter-xl" data-stitch-vh="min-h-[1024px]===min-h-screen">
+    <!-- Brand Hero -->
+    <header class="flex flex-col items-center text-center gap-gutter-sm">
+      <div class="w-24 h-24 rounded-xl bg-gradient-to-br from-accent-focus to-accent-purple flex items-center justify-center shadow-2xl shadow-accent-focus/35 border border-text-primary/20">
+        <span class="material-symbols-outlined text-on-accent-focus text-[56px]" style="font-variation-settings: &#39;FILL&#39; 1;">shield</span>
+      </div>
+      <h1 data-design-text-token="headline-lg" class="font-headline text-headline-lg text-text-primary mt-gutter-sm">FlowGuard</h1>
+      <p data-design-text-token="body-lg" class="text-body-lg text-text-secondary">Ruang Kerja Anti-Burnout Anda</p>
+      <p data-design-text-token="label-lg" class="text-label-lg text-accent-teal">Fokus lebih cerdas. Istirahat lebih baik.</p>
+    </header>
+
+    <!-- Glassmorphic Login Card -->
+    <main class="w-full max-w-[400px] bg-bg-surface/65 backdrop-blur-2xl border border-text-primary/15 rounded-xl p-gutter-xl flex flex-col gap-gutter-md shadow-2xl shadow-accent-focus/10">
+      <form class="flex flex-col gap-gutter-md">
+        <label class="flex flex-col gap-gutter-xs">
+          <span data-design-text-token="label-lg" class="text-label-lg text-text-primary">Email</span>
+          <input type="email" placeholder="nama@email.com" class="w-full min-h-[44px] rounded-md bg-bg-primary/70 border border-border-subtle px-gutter-md text-body-md text-text-primary placeholder:text-text-secondary focus:border-accent-focus focus:ring-0">
+        </label>
+
+        <label class="flex flex-col gap-gutter-xs">
+          <span data-design-text-token="label-lg" class="text-label-lg text-text-primary">Password</span>
+          <div class="flex items-center min-h-[44px] rounded-md bg-bg-primary/70 border border-border-subtle px-gutter-md focus-within:border-accent-focus">
+            <input type="password" placeholder="••••••••" class="w-full bg-transparent border-none p-0 text-body-md text-text-primary placeholder:text-text-secondary focus:ring-0">
+            <button type="button" aria-label="Tampilkan password" class="text-text-secondary hover:text-text-primary">
+              <span class="material-symbols-outlined text-body-md">visibility</span>
+            </button>
+          </div>
+        </label>
+
+        <button type="button" class="w-full min-h-[48px] rounded-md bg-gradient-to-r from-accent-focus to-accent-purple text-on-accent-focus shadow-lg shadow-accent-focus/25 hover:opacity-90 transition-opacity duration-state-change">
+          <span data-design-text-token="label-lg" class="text-label-lg">Masuk</span>
+        </button>
+      </form>
+
+      <div class="flex items-center gap-gutter-sm text-text-secondary">
+        <div class="h-px flex-1 bg-text-primary/10"></div>
+        <span data-design-text-token="caption-xs" class="text-caption-xs">atau</span>
+        <div class="h-px flex-1 bg-text-primary/10"></div>
+      </div>
+
+      <button type="button" class="w-full min-h-[44px] inline-flex items-center justify-center gap-gutter-sm rounded-md bg-bg-elevated/50 border border-text-primary/20 text-text-primary hover:bg-bg-elevated transition-colors duration-state-change">
+        <span class="material-symbols-outlined text-body-md">account_circle</span>
+        <span data-design-text-token="label-lg" class="text-label-lg">Masuk dengan Google</span>
+      </button>
+
+      <div class="flex flex-col items-center gap-gutter-xs pt-gutter-xs text-center">
+        <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">
+          Belum punya akun? <a href="#" class="text-accent-focus hover:underline">Daftar</a>
+        </p>
+        <a href="#" data-design-text-token="label-sm" class="text-label-sm text-text-secondary hover:text-text-primary">
+          Coba Tanpa Daftar (Guest Mode)
+        </a>
+      </div>
+    </main>
+
+    <footer class="text-center">
+      <p data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary">© 2026 FlowGuard · Lindungi matamu, jaga fokusmu.</p>
+    </footer>
+  </div>
+
+
+</body></html>

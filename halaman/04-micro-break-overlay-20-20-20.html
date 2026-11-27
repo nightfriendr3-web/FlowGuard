@@ -1,0 +1,233 @@
+<!DOCTYPE html><html lang="id" class="dark"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../aset/favicon.png">
+<link rel="apple-touch-icon" href="../aset/app-icon-192.png">
+<link rel="stylesheet" href="../aset/flowguard.css">
+<script defer src="../aset/flowguard.js"></script>
+
+  <meta charset="UTF-8">
+  <title>Micro-Break Overlay — FlowGuard</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config" data-stitch-original-src="0e026e4ec56befb6===../../tailwind.config.js">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'bg-primary': '#0D1321',
+        'bg-navy-end': '#1B2838',
+        'bg-surface': '#141C2E',
+        'bg-elevated': '#1C263B',
+        'border-subtle': '#29354D',
+        'text-primary': '#E8E6E3',
+        'text-secondary': '#9CA3AF',
+        'primary': '#6C8EEF',
+        'on-primary': '#00174A',
+        'accent-focus': '#6C8EEF',
+        'on-accent-focus': '#00174A',
+        'accent-indigo': '#818CF8',
+        'accent-purple': '#A78BFA',
+        'on-accent-purple': '#1E0A4B',
+        'accent-teal': '#5EEAD4',
+        'on-accent-teal': '#00201C',
+        'accent-break': '#81C995',
+        'on-accent-break': '#00210E',
+        'accent-warning': '#F4A261',
+        'on-accent-warning': '#2F1400',
+        'accent-danger': '#E07A6E',
+        'on-accent-danger': '#400202',
+        'energy-1': '#E07A6E',
+        'energy-2': '#F4A261',
+        'energy-3': '#FBBF24',
+        'energy-4': '#81C995',
+        'energy-5': '#34D399',
+        'focus-container': '#182442',
+        'on-focus-container': '#DBE1FF',
+        'break-container': '#122B24',
+        'on-break-container': '#A9F3BC',
+        'warning-container': '#332011',
+        'on-warning-container': '#FFDCC4',
+        'danger-container': '#361816',
+        'on-danger-container': '#FFDAD5',
+        'sepia-bg': '#F5F0E8',
+        'sepia-text': '#3D3929',
+        'forest-bg': '#1B2A1F',
+        'forest-accent': '#7BC8A4',
+      },
+      borderRadius: {
+        'sm': '6px',
+        'DEFAULT': '10px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"JetBrains Mono"', 'sans-serif'],
+        'headline': ['"Inter"', 'sans-serif'],
+        'body': ['"Inter"', 'sans-serif'],
+        'label': ['"Inter"', 'sans-serif'],
+        'caption': ['"Inter"', 'sans-serif'],
+      },
+      fontSize: {
+        'display-timer': ['72px', { lineHeight: '80px', letterSpacing: '-1.5px', fontWeight: '700' }],
+        'display-timer-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg': ['30px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-md': ['22px', { lineHeight: '30px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '500' }],
+        'caption-xs': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '400' }],
+      },
+      transitionDuration: {
+        'state-change': '300ms',
+        'surface-enter': '400ms',
+        'surface-exit': '300ms',
+        'flow-transition': '500ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+        'flow-transition': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+        'flow-transition': 'ease-in-out',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }
+    .bg-break-aurora {
+      background-color: #0D1321;
+      background-image:
+        radial-gradient(ellipse 75% 55% at 50% 35%, rgba(94, 234, 212, 0.10) 0%, rgba(129, 201, 149, 0.06) 40%, transparent 70%),
+        linear-gradient(160deg, #0D1321 0%, #13252A 100%);
+    }
+  </style>
+</head>
+<body class="bg-break-aurora text-text-primary font-body antialiased">
+  <!-- Gentle Layered Ocean Waves Background -->
+  <svg aria-hidden="true" class="fixed inset-0 w-full h-full pointer-events-none z-0 opacity-20" viewBox="0 0 1200 900" preserveAspectRatio="none">
+    <g fill="none" stroke="#5EEAD4" stroke-width="1.2">
+      <path d="M0 540 Q300 490 600 540 T1200 540"></path>
+      <path d="M0 590 Q300 540 600 590 T1200 590"></path>
+      <path d="M0 640 Q300 590 600 640 T1200 640"></path>
+      <path d="M0 690 Q300 640 600 690 T1200 690"></path>
+      <path d="M0 740 Q300 690 600 740 T1200 740"></path>
+      <path d="M0 790 Q300 740 600 790 T1200 790"></path>
+    </g>
+  </svg>
+  <div class="relative z-10 min-h-[1024px] flex flex-col items-center justify-center p-gutter-md lg:p-gutter-xl" data-stitch-vh="min-h-[1024px]===min-h-screen">
+    <main class="w-full max-w-2xl flex flex-col items-center gap-gutter-xl text-center">
+      <!-- Break Header -->
+      <header class="flex flex-col items-center gap-gutter-sm">
+        <!-- COMPONENT: badge-success -->
+        <span data-component-id="badge-success" data-component-type="badge" data-component-variant="success" role="status" class="inline-flex items-center gap-gutter-xs px-gutter-sm py-gutter-xs rounded-full bg-break-container/80 border border-accent-break/30 text-on-break-container">
+          <span class="w-2 h-2 rounded-full bg-accent-break"></span>
+          <span data-design-text-token="label-sm" class="text-label-sm">Micro-Break · Jeda Pendek</span>
+        </span>
+        <h1 data-design-text-token="headline-lg" class="font-headline text-headline-lg text-text-primary text-balance">
+          Istirahat Sejenak
+        </h1>
+      </header>
+
+      <!-- Main Guided Exercise Card (Glassmorphism) -->
+      <!-- COMPONENT: card-elevated -->
+      <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="w-full bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-lg lg:p-gutter-xl flex flex-col items-center gap-gutter-lg shadow-xl">
+        <div class="flex items-center gap-gutter-sm text-accent-teal">
+          <span class="material-symbols-outlined text-headline-md">visibility</span>
+          <h2 data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Relaksasi Mata</h2>
+        </div>
+
+        <p data-design-text-token="body-lg" class="text-body-lg text-text-secondary max-w-prose text-pretty">
+          Teknik 20-20-20: Lihat objek sejauh 6 meter selama 20 detik untuk merilekskan otot fokus mata.
+        </p>
+
+        <!-- Countdown Box -->
+        <div class="w-full max-w-xs bg-bg-elevated/60 border border-text-primary/10 rounded-lg p-gutter-md flex flex-col items-center gap-gutter-sm">
+          <span data-design-text-token="display-timer-mobile" class="font-display text-display-timer-mobile text-accent-break tabular-nums">00:14</span>
+          <div class="w-full h-2 rounded-full bg-bg-primary/60 overflow-hidden">
+            <div class="h-full w-[70%] rounded-full bg-gradient-to-r from-accent-break to-accent-teal"></div>
+          </div>
+        </div>
+
+        <!-- Visual Guide: Mata -> Jendela (6m) -> Objek Jauh -->
+        <div class="flex items-center justify-center gap-gutter-md sm:gap-gutter-lg py-gutter-sm text-text-secondary">
+          <div class="flex flex-col items-center gap-gutter-xs">
+            <div class="w-12 h-12 rounded-full bg-break-container/80 border border-accent-break/30 text-accent-break flex items-center justify-center">
+              <span class="material-symbols-outlined">visibility</span>
+            </div>
+            <span data-design-text-token="label-sm" class="text-label-sm">Mata</span>
+          </div>
+          <span class="material-symbols-outlined text-text-secondary">arrow_forward</span>
+          <div class="flex flex-col items-center gap-gutter-xs">
+            <div class="w-12 h-12 rounded-full bg-bg-elevated/70 border border-text-primary/10 text-text-primary flex items-center justify-center">
+              <span class="material-symbols-outlined">window</span>
+            </div>
+            <span data-design-text-token="label-sm" class="text-label-sm">Jendela (6m)</span>
+          </div>
+          <span class="material-symbols-outlined text-text-secondary">arrow_forward</span>
+          <div class="flex flex-col items-center gap-gutter-xs">
+            <div class="w-12 h-12 rounded-full bg-break-container/80 border border-accent-break/30 text-accent-teal flex items-center justify-center">
+              <span class="material-symbols-outlined">park</span>
+            </div>
+            <span data-design-text-token="label-sm" class="text-label-sm">Objek Jauh</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Next & Audio Info Row -->
+      <div class="w-full grid grid-cols-1 sm:grid-cols-2 gap-gutter-md text-left">
+        <div class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-md flex items-center gap-gutter-md">
+          <span class="material-symbols-outlined text-accent-break">self_improvement</span>
+          <div>
+            <p data-design-text-token="label-sm" class="text-label-sm text-text-secondary">Selanjutnya</p>
+            <p data-design-text-token="body-md" class="text-body-md text-text-primary">Peregangan Leher (3 mnt)</p>
+          </div>
+        </div>
+
+        <div class="bg-bg-surface/60 backdrop-blur-xl border border-text-primary/10 rounded-lg p-gutter-md flex items-center gap-gutter-md">
+          <span class="material-symbols-outlined text-accent-teal">notifications_active</span>
+          <div>
+            <p data-design-text-token="label-sm" class="text-label-sm text-text-secondary">Audio Relaksasi</p>
+            <p data-design-text-token="body-md" class="text-body-md text-text-primary">Lonceng meditasi lembut...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Break Actions -->
+      <footer class="flex flex-col sm:flex-row items-center justify-center gap-gutter-md w-full">
+        <button data-component-id="button-secondary" data-component-type="button" data-component-variant="secondary" type="button" class="w-full sm:w-auto inline-flex items-center justify-center gap-gutter-sm min-h-[44px] px-gutter-lg py-gutter-sm rounded-md bg-bg-elevated/60 text-text-primary border border-text-primary/15 hover:bg-bg-surface transition-colors duration-state-change">
+          <span data-design-text-token="label-lg" class="text-label-lg">+5 Menit Tunda (Sisa: 2x)</span>
+        </button>
+
+        <button data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" type="button" class="w-full sm:w-auto inline-flex items-center justify-center gap-gutter-sm min-h-[44px] px-gutter-xl py-gutter-sm rounded-md bg-gradient-to-r from-accent-focus to-accent-purple text-on-accent-focus shadow-lg shadow-accent-focus/25 hover:opacity-90 transition-opacity duration-state-change">
+          <span data-design-text-token="label-lg" class="text-label-lg">Kembali Fokus</span>
+          <span class="material-symbols-outlined" aria-hidden="true" style="font-variation-settings: &#39;FILL&#39; 1;">play_arrow</span>
+        </button>
+      </footer>
+    </main>
+  </div>
+
+
+</body></html>

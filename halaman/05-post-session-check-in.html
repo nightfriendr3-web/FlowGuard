@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="id" class="dark"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="../aset/favicon.png">
+<link rel="apple-touch-icon" href="../aset/app-icon-192.png">
+<link rel="stylesheet" href="../aset/flowguard.css">
+<script defer src="../aset/flowguard.js"></script>
+
+  <meta charset="UTF-8">
+  <title>Post-Session Check-in — FlowGuard</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config" data-stitch-original-src="0e026e4ec56befb6===../../tailwind.config.js">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'bg-primary': '#0D1321',
+        'bg-navy-end': '#1B2838',
+        'bg-surface': '#141C2E',
+        'bg-elevated': '#1C263B',
+        'border-subtle': '#29354D',
+        'text-primary': '#E8E6E3',
+        'text-secondary': '#9CA3AF',
+        'primary': '#6C8EEF',
+        'on-primary': '#00174A',
+        'accent-focus': '#6C8EEF',
+        'on-accent-focus': '#00174A',
+        'accent-indigo': '#818CF8',
+        'accent-purple': '#A78BFA',
+        'on-accent-purple': '#1E0A4B',
+        'accent-teal': '#5EEAD4',
+        'on-accent-teal': '#00201C',
+        'accent-break': '#81C995',
+        'on-accent-break': '#00210E',
+        'accent-warning': '#F4A261',
+        'on-accent-warning': '#2F1400',
+        'accent-danger': '#E07A6E',
+        'on-accent-danger': '#400202',
+        'energy-1': '#E07A6E',
+        'energy-2': '#F4A261',
+        'energy-3': '#FBBF24',
+        'energy-4': '#81C995',
+        'energy-5': '#34D399',
+        'focus-container': '#182442',
+        'on-focus-container': '#DBE1FF',
+        'break-container': '#122B24',
+        'on-break-container': '#A9F3BC',
+        'warning-container': '#332011',
+        'on-warning-container': '#FFDCC4',
+        'danger-container': '#361816',
+        'on-danger-container': '#FFDAD5',
+        'sepia-bg': '#F5F0E8',
+        'sepia-text': '#3D3929',
+        'forest-bg': '#1B2A1F',
+        'forest-accent': '#7BC8A4',
+      },
+      borderRadius: {
+        'sm': '6px',
+        'DEFAULT': '10px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '48px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"JetBrains Mono"', 'sans-serif'],
+        'headline': ['"Inter"', 'sans-serif'],
+        'body': ['"Inter"', 'sans-serif'],
+        'label': ['"Inter"', 'sans-serif'],
+        'caption': ['"Inter"', 'sans-serif'],
+      },
+      fontSize: {
+        'display-timer': ['72px', { lineHeight: '80px', letterSpacing: '-1.5px', fontWeight: '700' }],
+        'display-timer-mobile': ['32px', { lineHeight: '40px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-lg': ['30px', { lineHeight: '38px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'headline-md': ['22px', { lineHeight: '30px', letterSpacing: '-0.25px', fontWeight: '600' }],
+        'body-lg': ['18px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '500' }],
+        'label-sm': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '500' }],
+        'caption-xs': ['12px', { lineHeight: '16px', letterSpacing: '0.25px', fontWeight: '400' }],
+      },
+      transitionDuration: {
+        'state-change': '300ms',
+        'surface-enter': '400ms',
+        'surface-exit': '300ms',
+        'flow-transition': '500ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+        'flow-transition': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+        'flow-transition': 'ease-in-out',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }
+    .bg-flow-mesh {
+      background-color: #0D1321;
+      background-image:
+        radial-gradient(ellipse 70% 50% at 50% 30%, rgba(167, 139, 250, 0.14), transparent 65%),
+        linear-gradient(160deg, #0D1321 0%, #1B2838 100%);
+    }
+  </style>
+</head>
+<body class="bg-flow-mesh text-text-primary font-body antialiased">
+  <div class="min-h-[1024px] relative flex items-center justify-center p-gutter-md lg:p-gutter-xl" data-stitch-vh="min-h-[1024px]===min-h-screen">
+    <div aria-hidden="true" class="fixed inset-0 bg-bg-primary/70 backdrop-blur-lg z-0"></div>
+
+    <!-- Post-Session Check-in Glassmorphic Modal -->
+    <div role="dialog" aria-modal="true" aria-labelledby="post-checkin-title" data-component-id="modal-standard" data-component-type="modal" data-component-variant="standard" class="relative z-10 w-full max-w-xl bg-bg-surface/80 backdrop-blur-2xl border border-text-primary/15 rounded-xl p-gutter-lg lg:p-gutter-xl flex flex-col gap-gutter-lg shadow-2xl shadow-accent-purple/10 overflow-hidden">
+      <svg aria-hidden="true" class="absolute inset-0 w-full h-full pointer-events-none opacity-10" viewBox="0 0 500 600">
+        <g fill="none" stroke="#6C8EEF" stroke-width="1">
+          <circle cx="250" cy="300" r="90"></circle><circle cx="250" cy="300" r="160"></circle>
+          <circle cx="250" cy="300" r="230"></circle><circle cx="250" cy="300" r="300"></circle>
+        </g>
+      </svg>
+      <header class="flex items-start justify-between gap-gutter-md">
+        <div class="flex items-center gap-gutter-sm">
+          <span class="material-symbols-outlined text-accent-teal text-headline-md" style="font-variation-settings: &#39;FILL&#39; 1;">celebration</span>
+          <div>
+            <h1 id="post-checkin-title" data-design-text-token="headline-md" class="font-headline text-headline-md text-text-primary">Sesi #2 Selesai!</h1>
+            <p data-design-text-token="label-lg" class="text-label-lg text-text-secondary">Catat kondisimu sebelum lanjut atau mengakhiri hari.</p>
+          </div>
+        </div>
+        <button data-component-id="button-icon" data-component-type="button" data-component-variant="icon" type="button" aria-label="Tutup" class="inline-flex items-center justify-center w-11 h-11 rounded-md bg-bg-elevated/60 text-text-secondary border border-text-primary/10 hover:text-text-primary transition-colors duration-state-change">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </header>
+
+      <!-- Battery Energy Selector (1-5) -->
+      <section class="flex flex-col gap-gutter-sm">
+        <span data-design-text-token="body-md" class="text-body-md text-text-primary">Bagaimana energimu sekarang?</span>
+        <div class="grid grid-cols-5 gap-gutter-sm">
+          <button type="button" class="flex flex-col items-center justify-center gap-gutter-xs min-h-[84px] p-gutter-xs rounded-md bg-bg-elevated/50 border border-text-primary/10 text-energy-1 hover:bg-danger-container/40 transition-colors duration-state-change">
+            <span class="material-symbols-outlined text-headline-md">battery_1_bar</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary text-center">Sangat Lelah</span>
+          </button>
+          <button type="button" class="flex flex-col items-center justify-center gap-gutter-xs min-h-[84px] p-gutter-xs rounded-md bg-bg-elevated/50 border border-text-primary/10 text-energy-2 hover:bg-warning-container/40 transition-colors duration-state-change">
+            <span class="material-symbols-outlined text-headline-md">battery_2_bar</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary text-center">Agak Lelah</span>
+          </button>
+          <button type="button" aria-pressed="true" class="flex flex-col items-center justify-center gap-gutter-xs min-h-[84px] p-gutter-xs rounded-md bg-warning-container/60 border border-energy-3 text-energy-3 shadow-lg shadow-energy-3/15 scale-[1.03] transition-transform duration-state-change">
+            <span class="material-symbols-outlined text-headline-md" style="font-variation-settings: &#39;FILL&#39; 1;">battery_3_bar</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs text-on-warning-container text-center">Cukup</span>
+          </button>
+          <button type="button" class="flex flex-col items-center justify-center gap-gutter-xs min-h-[84px] p-gutter-xs rounded-md bg-bg-elevated/50 border border-text-primary/10 text-energy-4 hover:bg-break-container/40 transition-colors duration-state-change">
+            <span class="material-symbols-outlined text-headline-md">battery_5_bar</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary text-center">Berenergi</span>
+          </button>
+          <button type="button" class="flex flex-col items-center justify-center gap-gutter-xs min-h-[84px] p-gutter-xs rounded-md bg-bg-elevated/50 border border-text-primary/10 text-energy-5 hover:bg-break-container/40 transition-colors duration-state-change">
+            <span class="material-symbols-outlined text-headline-md">battery_charging_full</span>
+            <span data-design-text-token="caption-xs" class="text-caption-xs text-text-secondary text-center">Sangat Segar!</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Focus Quality Pills -->
+      <section class="flex flex-col gap-gutter-sm">
+        <span data-design-text-token="body-md" class="text-body-md text-text-primary">Seberapa fokus kamu tadi?</span>
+        <div class="grid grid-cols-3 gap-gutter-sm">
+          <button type="button" class="inline-flex items-center justify-center gap-gutter-xs min-h-[44px] rounded-full bg-bg-elevated/60 border border-text-primary/10 text-text-secondary hover:text-text-primary transition-colors duration-state-change">
+            <span class="material-symbols-outlined text-label-lg">cloud</span>
+            <span data-design-text-token="label-lg" class="text-label-lg">Buyar</span>
+          </button>
+          <button type="button" aria-pressed="true" class="inline-flex items-center justify-center gap-gutter-xs min-h-[44px] rounded-full bg-focus-container border border-accent-focus text-on-focus-container shadow-md shadow-accent-focus/15 transition-colors duration-state-change">
+            <span class="material-symbols-outlined text-label-lg">light_mode</span>
+            <span data-design-text-token="label-lg" class="text-label-lg">Lumayan</span>
+          </button>
+          <button type="button" class="inline-flex items-center justify-center gap-gutter-xs min-h-[44px] rounded-full bg-bg-elevated/60 border border-text-primary/10 text-text-secondary hover:text-text-primary transition-colors duration-state-change">
+            <span class="material-symbols-outlined text-label-lg">target</span>
+            <span data-design-text-token="label-lg" class="text-label-lg">Sangat Fokus</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Task Status Checklist -->
+      <section class="flex flex-col gap-gutter-sm">
+        <span data-design-text-token="body-md" class="text-body-md text-text-primary">Status tugas sesi ini:</span>
+        <div class="bg-bg-elevated/50 border border-text-primary/10 rounded-md p-gutter-md flex flex-col gap-gutter-sm">
+          <label class="flex items-center gap-gutter-md cursor-pointer">
+            <input type="checkbox" checked class="w-5 h-5 rounded-sm bg-bg-primary/60 border-border-subtle text-accent-break focus:ring-accent-break">
+            <span data-design-text-token="body-md" class="text-body-md text-text-secondary line-through">Revisi laporan BAB 3</span>
+          </label>
+          <label class="flex items-center gap-gutter-md cursor-pointer">
+            <input type="checkbox" class="w-5 h-5 rounded-sm bg-bg-primary/60 border-border-subtle text-accent-focus focus:ring-accent-focus">
+            <span data-design-text-token="body-md" class="text-body-md text-text-primary">Review pull request</span>
+          </label>
+        </div>
+      </section>
+
+      <!-- Physical Symptoms Chips (Optional) -->
+      <section class="flex flex-col gap-gutter-sm">
+        <span data-design-text-token="body-md" class="text-body-md text-text-primary">Ada keluhan fisik? (opsional)</span>
+        <div class="flex flex-wrap gap-gutter-sm">
+          <button type="button" aria-pressed="true" class="inline-flex items-center gap-gutter-xs min-h-[40px] px-gutter-md rounded-full bg-warning-container/80 border border-accent-warning text-on-warning-container shadow-md shadow-accent-warning/15">
+            <span class="material-symbols-outlined text-label-lg">visibility</span>
+            <span data-design-text-token="label-lg" class="text-label-lg">Mata kering</span>
+          </button>
+          <button type="button" class="inline-flex items-center gap-gutter-xs min-h-[40px] px-gutter-md rounded-full bg-bg-elevated/60 border border-text-primary/10 text-text-secondary hover:text-text-primary">
+            <span class="material-symbols-outlined text-label-lg">accessibility_new</span>
+            <span data-design-text-token="label-lg" class="text-label-lg">Tegang leher</span>
+          </button>
+          <button type="button" class="inline-flex items-center gap-gutter-xs min-h-[40px] px-gutter-md rounded-full bg-bg-elevated/60 border border-text-primary/10 text-text-secondary hover:text-text-primary">
+            <span class="material-symbols-outlined text-label-lg">psychology</span>
+            <span data-design-text-token="label-lg" class="text-label-lg">Sakit kepala</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Actions -->
+      <footer class="flex flex-col sm:flex-row items-center gap-gutter-sm pt-gutter-xs">
+        <button data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" type="button" class="w-full sm:flex-1 inline-flex items-center justify-center gap-gutter-sm min-h-[48px] px-gutter-lg py-gutter-sm rounded-md bg-gradient-to-r from-accent-focus to-accent-purple text-on-accent-focus shadow-lg shadow-accent-focus/25 hover:opacity-90 transition-opacity duration-state-change">
+          <span data-design-text-token="label-lg" class="text-label-lg">Lanjut Sesi Berikutnya</span>
+          <span class="material-symbols-outlined" aria-hidden="true" style="font-variation-settings: &#39;FILL&#39; 1;">play_arrow</span>
+        </button>
+
+        <button data-component-id="button-tertiary" data-component-type="button" data-component-variant="tertiary" type="button" class="w-full sm:w-auto inline-flex items-center justify-center gap-gutter-sm min-h-[48px] px-gutter-lg py-gutter-sm rounded-md bg-transparent text-text-secondary hover:bg-bg-elevated/60 hover:text-text-primary transition-colors duration-state-change">
+          <span class="material-symbols-outlined text-label-lg">bedtime</span>
+          <span data-design-text-token="label-lg" class="text-label-lg">Akhiri Hari Kerja</span>
+        </button>
+      </footer>
+    </div>
+  </div>
+
+
+</body></html>
