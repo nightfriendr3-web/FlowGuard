@@ -1,6 +1,12 @@
 // FlowGuard — navigasi prototipe antar-slide, kunci seleksi teks, dan logo.
 // File ini dipakai oleh semua halaman di folder halaman/.
 (function () {
+  // Daftarkan service worker supaya bisa dipasang sebagai aplikasi & jalan offline
+  try {
+    if ("serviceWorker" in navigator && location.protocol !== "file:") {
+      navigator.serviceWorker.register(new URL("../sw.js", document.currentScript ? document.currentScript.src : location.href).href).catch(function () {});
+    }
+  } catch (e) {}
   var FILES = {"1": "01-workspace-utama-idle-state", "2": "02-pre-session-cognitive-check-in", "3": "03-active-focus-session-flow-mode", "4": "04-micro-break-overlay-20-20-20", "5": "05-post-session-check-in", "6": "06-insights-dan-burnout-radar", "7": "07-perpustakaan-istirahat-break-library", "8": "08-pengaturan-dan-wellness-guardrails", "9": "09-pengaturan-sesi-adaptif", "10": "10-pengaturan-mode-konteks", "11": "11-pengaturan-profil-dan-persona", "12": "12-pengaturan-tampilan", "13": "13-pengaturan-notifikasi", "14": "14-pengaturan-soundscape", "15": "15-pengaturan-posture-check", "16": "16-pengaturan-motivasi", "17": "17-pengaturan-data-dan-privasi", "18": "18-pengaturan-bantuan", "19": "19-landing-login-flowguard", "20": "20-quick-onboarding-3-langkah", "21": "21-edit-profil-modal", "22": "22-panduan-relaksasi-mata-20-20-20", "23": "23-panduan-peregangan-leher-dan-bahu", "24": "24-panduan-box-breathing-4-4-4-4", "25": "25-panduan-peregangan-pergelangan-tangan", "26": "26-panduan-peregangan-punggung-dan-bahu", "27": "27-panduan-palming-mata"}; // nomor halaman -> nama file
   var here = (location.pathname.split("/").pop() || "").slice(0, 2);
   var page = parseInt(here, 10) || 0;
@@ -60,6 +66,43 @@
     [[22, 23, 24, 25, 26, 27], /kembali ke perpustakaan|selesai/, 7]
   ];
 
+
+  // ---- Pilihan tunggal: gaya "terpilih" berpindah ke tombol yang diklik ----
+  function pickGroupOf(el) {
+    var p = el.parentElement;
+    if (el.tagName !== "BUTTON" || !p) return null;
+    var kids = [].filter.call(p.children, function (c) { return c.tagName === "BUTTON"; });
+    if (kids.length < 2 || kids.indexOf(el) < 0) return null;
+    var sel = kids.filter(function (c) { return c.getAttribute("aria-pressed") === "true"; });
+    return sel.length === 1 ? { p: p, kids: kids, sel: sel[0] } : null;
+  }
+  function swapLook(a, b) {
+    var x = [a].concat([].slice.call(a.querySelectorAll("*"))), y = [b].concat([].slice.call(b.querySelectorAll("*")));
+    var n = x.length === y.length ? x.length : 1; // struktur beda -> tukar tombolnya saja
+    for (var i = 0; i < n; i++) {
+      var c1 = x[i].getAttribute("class") || "", c2 = y[i].getAttribute("class") || "";
+      var s1 = x[i].getAttribute("style"), s2 = y[i].getAttribute("style");
+      x[i].setAttribute("class", c2); y[i].setAttribute("class", c1);
+      s2 === null ? x[i].removeAttribute("style") : x[i].setAttribute("style", s2);
+      s1 === null ? y[i].removeAttribute("style") : y[i].setAttribute("style", s1);
+    }
+    a.removeAttribute("aria-pressed"); b.setAttribute("aria-pressed", "true");
+  }
+  function pickKey(p) { return "fg_pick_" + page + "_" + [].indexOf.call(document.getElementsByTagName("*"), p); }
+  function pickSwap(g, el, save) {
+    swapLook(g.sel, el);
+    if (save) { try { localStorage.setItem(pickKey(g.p), String(g.kids.indexOf(el))); } catch (e) {} }
+  }
+  function restorePicks() {
+    var seen = [];
+    [].forEach.call(document.querySelectorAll('button[aria-pressed="true"]'), function (b) {
+      var g = pickGroupOf(b); if (!g || seen.indexOf(g.p) >= 0) return; seen.push(g.p);
+      var v = null; try { v = localStorage.getItem(pickKey(g.p)); } catch (e) {}
+      var i = parseInt(v, 10);
+      if (!isNaN(i) && g.kids[i] && g.kids[i] !== g.sel) pickSwap(g, g.kids[i], false);
+    });
+  }
+
   function labelOf(el) {
     return ((el.getAttribute("aria-label") || "") + " " + el.textContent).replace(/\s+/g, " ").trim().toLowerCase();
   }
@@ -67,6 +110,19 @@
   document.addEventListener("click", function (e) {
     var el = e.target.closest("a, button, [role=button]");
     if (!el || el.closest("#fg-menu")) return;
+    // Ikon mata password: tampilkan / sembunyikan
+    var eyeIcon = el.tagName === "BUTTON" && el.querySelector(".material-symbols-outlined");
+    if (eyeIcon && /^visibility(_off)?$/.test(eyeIcon.textContent.trim())) {
+      var inp = el.parentElement && el.parentElement.querySelector("input");
+      if (inp) {
+        e.preventDefault();
+        var show = inp.type === "password";
+        inp.type = show ? "text" : "password";
+        eyeIcon.textContent = show ? "visibility_off" : "visibility";
+        el.setAttribute("aria-label", show ? "Sembunyikan password" : "Tampilkan password");
+        return;
+      }
+    }
     var label = labelOf(el);
     for (var i = 0; i < RULES.length; i++) {
       var r = RULES[i];
@@ -76,6 +132,8 @@
       typeof r[2] === "function" ? r[2](el) : go(r[2]);
       return;
     }
+    var grp = pickGroupOf(el);
+    if (grp) { e.preventDefault(); if (el !== grp.sel) pickSwap(grp, el, true); return; }
     if (el.tagName === "A" && (el.getAttribute("href") || "#") === "#") e.preventDefault();
     if (el.type === "submit") e.preventDefault();
     // Tombol pilihan (grup) -> tandai yang dipilih; tombol tunggal -> beri tahu
@@ -108,6 +166,8 @@
         p.parentElement.replaceChild(img, p);
       }
     });
+
+    restorePicks();
 
     // Tombol menu daftar halaman
     var m = document.createElement("a");
